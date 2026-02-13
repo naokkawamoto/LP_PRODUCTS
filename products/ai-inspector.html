@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI InspectorはAI検査で建物診断・欠陥検出を自動化。画像認識AIと施工品質検査でホームインスペクションの精度と効率を向上。品質管理DX・建設AIで建設現場の建物診断を支援。">
+    <meta name="keywords" content="AI Inspector,AI検査,建物診断,欠陥検出,ホームインスペクション,画像認識AI,施工品質検査,品質管理DX,建設AI,点群データAI解析">
+    <title>AI Inspector（AI建物診断）| ONETECH - ホームインスペクション・施工品質検査をAIで効率化</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        :root {
+            --primary-green: #6DBE4D;
+            --accent-blue: #4A90E2;
+            --light-grey: #F0F3F5;
+            --light-blue: #E6F0F8;
+        }
+
+        .cta-button {
+            background: #6DBE4D;
+            color: white;
+        }
+
+        .cta-button:hover {
+            background: #5aa83d;
+        }
+
+        .pain-section.explicit {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .before-after-item {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .effect-numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .effect-number {
+            text-align: center;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .effect-number .number {
+            font-size: 3rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #6DBE4D;
+        }
+        
+        .use-case-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .use-case-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #ffffff;
+            border-radius: 8px;
+            border-left: 3px solid #6DBE4D;
+            border: 1px solid #e9ecef;
+        }
+
+        .solution-overview {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #e9ecef;
+        }
+
+        .content-section {
+            background: #ffffff;
+            color: #1a2332;
+            padding: 3rem 2rem;
+            margin: 0;
+        }
+
+        /* プルダウンメニュー */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0 0 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #6DBE4D;
+        }
+
+        .dropdown-menu li:first-child a {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-menu li:last-child a {
+            border-radius: 0 0 8px 8px;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 2rem 1rem;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.1);
+                margin-top: 0.5rem;
+            }
+
+            .dropdown-menu a {
+                color: white;
+                padding: 0.5rem 1rem;
+            }
+
+            .dropdown-menu a:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: #ffd700;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="../onetech-lp.html" class="logo">ONETECH</a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="../onetech-lp.html">トップ</a></li>
+                    <li class="dropdown">
+                        <a href="../onetech-lp.html#products" class="dropdown-toggle">プロダクト <span style="font-size: 0.8em;">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="insightscanx.html">InsightScanX（インサイトスキャンエックス）</a></li>
+                            <li><a href="housecan.html">HOUSECAN（ハウスキャン）</a></li>
+                            <li><a href="ai-inspector.html">AI Inspector（エーアイインスペクター）</a></li>
+                            <li><a href="customize.html">カスタマイズ（カスタマイズ）</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- ヒーローセクション -->
+        <section class="hero" style="background: #f8f9fa; height: auto; padding: 4rem 2rem;">
+            <div class="hero-content" style="position: relative; z-index: 1; color: #1a2332; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div>
+                    <h1 style="color: #1a2332; text-shadow: none;">AI Inspector<br>AI建物診断・ホームインスペクション</h1>
+                    <p style="color: #495057; text-shadow: none; margin: 1.5rem 0;">AI検査と画像認識AIで建物診断・欠陥検出を自動化<br>施工品質検査・品質管理DXでホームインスペクションを効率化</p>
+                    <a href="#overview" class="cta-button">詳細を見る</a>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://placehold.jp/600x400.png" alt="AI Inspector - AI検査で建物診断・ホームインスペクションを効率化" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- コンテンツセクション -->
+        <section id="overview" class="content-section">
+            <!-- 顕在化されたペインの提示 -->
+            <div class="pain-section explicit">
+                <h3 style="color: #1a2332; font-weight: 600;">現場で起きている具体的な課題</h3>
+                <ul style="list-style: none; padding: 0; color: #495057;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 建物診断に専門知識が必要で、検査員の確保が困難
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 人的ミスによる検査漏れや見落としが発生しやすい
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> ホームインスペクションに時間がかかり、顧客対応が遅れる
+                    </li>
+                    <li style="padding: 0.75rem 0;">
+                        <strong style="color: #1a2332;">✓</strong> 検査結果の記録が紙ベースで、データ活用ができない
+                    </li>
+                </ul>
+            </div>
+
+            <!-- インスペクションの活用促進の背景 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">「インスペクション」の活用促進の背景</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/ai-inspector-background.webp" alt="インスペクションの活用促進の背景 - 長寿命化・法改正・中古住宅活性化の循環図" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    建物の長寿命化、令和6年4月の法改正（建物状況調査に係る改正宅地建物取引業法施行規則等）、中古住宅活性化の3つの要素が相互に連携し、ホームインスペクションの重要性が高まっています。AI Inspectorは、この社会的ニーズに応えるソリューションです。
+                </p>
+            </div>
+
+            <!-- 解決策の提示（製品概要） -->
+            <div class="solution-overview">
+                <h3 style="color: #1a2332; font-weight: 600;">製品概要とアプローチ</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #495057;">
+                    AI Inspectorは、建設AI品質検査を実現する施工品質検査アプリです。
+                    画像認識AIが建物の欠陥を自動検出し、かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査に対応。
+                    品質管理DXにより、ゼネコン品質管理を支援。建設現場AI活用により、建設現場デジタルツインを構築。
+                    点群データAI解析により、建設現場スキャンアプリとして、現地調査アプリ、リフォーム現調アプリとして活用可能。
+                    写真付き現調レポートを自動生成し、Android対応により幅広いデバイスで利用可能。無料プランも提供しており、建設DXツール比較において優位性を発揮します。
+                </p>
+            </div>
+
+            <!-- ビフォーアフター比較表 -->
+            <div style="margin: 3rem 0;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">業務プロセスの変革</h3>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <img src="../assets/images/ai-inspector-before-after.webp" alt="AI Inspector導入前後の業務プロセス比較 - インスペクション準備・現地調査・記録・レポート作成・複数物件管理の効率化" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <!-- ビフォーアフター -->
+            <div class="before-after">
+                <div class="before-after-item">
+                    <h4 style="color: #1a2332; font-weight: 600;">❌ 導入前</h4>
+                    <ul style="color: #495057;">
+                        <li>検査時間：1件あたり2〜3時間</li>
+                        <li>検査精度：人的判断に依存</li>
+                        <li>見落とし率：20〜30%</li>
+                        <li>検査員：専門知識が必要</li>
+                        <li>データ管理：紙ベース</li>
+                        <li>ホームインスペクション：時間がかかる</li>
+                    </ul>
+                </div>
+                <div class="before-after-item">
+                    <h4 style="color: #1a2332; font-weight: 600;">✅ 導入後</h4>
+                    <ul style="color: #495057;">
+                        <li>検査時間：1件あたり30分〜1時間</li>
+                        <li>検査精度：AIによる高精度判定</li>
+                        <li>見落とし率：5%以下</li>
+                        <li>検査員：AIサポートで誰でも可能</li>
+                        <li>データ管理：デジタル化・クラウド保存</li>
+                        <li>ホームインスペクション：迅速化・効率化</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 検査導線優先設計 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">検査導線優先設計</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/ai-inspector-route-design.webp" alt="AI Inspectorの検査導線優先設計 - 検査開始・屋外検査・屋内検査・傾斜検査の効率的な検査フロー" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    検査開始から屋外検査、屋内検査、傾斜検査まで、最適な検査ルートに沿って効率的に検査を進められます。検査漏れを防ぎ、時間を大幅に短縮します。
+                </p>
+            </div>
+
+            <!-- 直感操作で検査完了 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">直感操作で検査完了</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/ai-inspector-intuitive.webp" alt="AI Inspectorの直感操作 - 図面拡大・検査項目プロット・結果登録・写真添付の4ステップで検査完了" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    スマートフォンで図面を拡大し、検査項目をプロット、結果を登録、写真を添付するだけで検査が完了します。複雑な操作は不要で、誰でも簡単にホームインスペクションを実施できます。
+                </p>
+            </div>
+
+            <!-- スマホだけでハウスインスペクション完結 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">スマホだけでハウスインスペクション完結</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/ai-inspector-complete.webp" alt="AI Inspectorでスマホだけで完結 - 検査項目登録・検査漏れ防止・レポート閲覧・PDF出力（国交省準拠）まで" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    検査項目の登録から検査漏れ防止、レポート閲覧、国交省準拠のPDF出力まで、スマートフォンだけで完結します。現場からそのまま報告書を生成でき、業務効率が大幅に向上します。
+                </p>
+            </div>
+
+            <!-- 特徴 -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">差別化ポイント</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4 style="color: #1a2332; font-weight: 600;">建設AI品質検査：施工品質検査アプリ</h4>
+                        <p style="color: #495057;">建設AI品質検査により、かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査を自動実行。品質管理DXにより、ゼネコン品質管理を支援。建設現場AI活用により、人的ミスを大幅に削減します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: #1a2332; font-weight: 600;">建設現場スキャンアプリ：現地調査アプリ・リフォーム現調アプリ</h4>
+                        <p style="color: #495057;">建設現場スキャンアプリとして、現地調査アプリ、リフォーム現調アプリとして活用可能。スマートフォンで写真を撮るだけでAI検査。Android対応により幅広いデバイスで利用可能。専門知識がなくても高品質な診断が可能です。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: #1a2332; font-weight: 600;">点群データAI解析：建設現場デジタルツイン</h4>
+                        <p style="color: #495057;">点群データAI解析により、建設現場デジタルツインを構築。検査データを蓄積し、劣化予測やメンテナンス計画を提案。建物の長寿命化を支援し、品質管理DXを実現します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: #1a2332; font-weight: 600;">写真付き現調レポート：無料プラン提供</h4>
+                        <p style="color: #495057;">写真付き現調レポートを自動生成。AI検査結果から自動的に検査報告書を生成。無料プランも提供しており、建設DXツール比較において優位性を発揮。ホームインスペクション業務を効率化し、顧客対応を迅速化します。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 導入効果（数値） -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">導入効果（定量的な成果）</h3>
+                <div class="effect-numbers">
+                    <div class="effect-number">
+                        <span class="number">70%</span>
+                        <span style="color: #495057;">検査時間削減</span>
+                    </div>
+                    <div class="effect-number">
+                        <span class="number">85%</span>
+                        <span style="color: #495057;">見落とし削減</span>
+                    </div>
+                    <div class="effect-number">
+                        <span class="number">90%</span>
+                        <span style="color: #495057;">検査精度向上</span>
+                    </div>
+                    <div class="effect-number">
+                        <span class="number">4倍</span>
+                        <span style="color: #495057;">検査処理能力向上</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 応用例・ユースケース -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">応用例・想定利用シーン</h3>
+                <ul class="use-case-list">
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">施工品質検査アプリ：ホームインスペクション業務</strong><br>
+                        建設AI品質検査により、中古物件購入時の建物診断をAI検査で効率化。かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査に対応。写真付き現調レポートを自動生成して顧客に提供。無料プランも提供しており、ホームインスペクションの品質と速度を向上。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">品質管理DX：ゼネコン品質管理・建物の定期点検</strong><br>
+                        品質管理DXにより、ゼネコン品質管理を支援。マンションやオフィスビルの定期点検をAI検査で効率化。建設現場デジタルツインにより、劣化状況をデータ化して管理。点群データAI解析で建物診断の精度を向上させます。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">建設現場AI活用：施工品質管理</strong><br>
+                        建設現場AI活用により、建設現場での施工品質をAI検査で確認。建設現場スキャンアプリとして、現地調査アプリ、リフォーム現調アプリとして活用可能。欠陥を早期発見して修正コストを削減。Android対応により幅広いデバイスで利用可能。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">建設DXツール比較：保険査定支援</strong><br>
+                        建設DXツール比較において優位性を発揮。保険会社の建物査定をAI検査で支援。建設現場デジタルツインにより、客観的なデータに基づく査定を実現。建設DXによる効率化を実現します。
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section id="contact" class="section" style="background: #ffffff;">
+            <h2 style="color: #1a2332; border-bottom: 2px solid #6c757d; padding-bottom: 1rem; margin-bottom: 2rem; text-align: center; font-weight: 600;">
+                お問い合わせ・資料請求
+            </h2>
+            <div style="text-align: center; margin: 2rem 0;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #495057;">
+                    AI Inspectorで建物診断を効率化しませんか？<br>
+                    まずは無料でお試しください。
+                </p>
+                <div id="contact-form" style="max-width: 600px; margin: 3rem auto; background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid #e9ecef;">
+                    <h3 style="color: #1a2332; margin-bottom: 1.5rem; text-align: center; font-weight: 600;">お問い合わせフォーム</h3>
+                    <form style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="text" placeholder="お名前" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <input type="email" placeholder="メールアドレス" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <input type="tel" placeholder="電話番号" style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <select required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                            <option value="">お問い合わせ種別を選択</option>
+                            <option value="material">資料請求</option>
+                            <option value="demo">デモ申し込み</option>
+                            <option value="inquiry">お問い合わせ</option>
+                        </select>
+                        <textarea placeholder="お問い合わせ内容" rows="5" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; resize: vertical; background: white;"></textarea>
+                        <button type="submit" class="cta-button" style="background: #6DBE4D; color: white; border: none; cursor: pointer; padding: 1rem 2rem; font-size: 1.1rem; font-weight: 600;">送信する</button>
+                    </form>
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #dee2e6; text-align: center;">
+                        <p style="color: #495057; margin-bottom: 1rem; font-size: 0.95rem;">お急ぎの場合は、直接お電話またはメールでお問い合わせください</p>
+                        <p style="color: #1a2332; font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600;">
+                            <strong>株式会社One Technology Japan</strong>
+                        </p>
+                        <p style="color: #1a2332; font-size: 1.1rem; margin-bottom: 0.5rem;">
+                            TEL: <a href="tel:03-5324-2652" style="color: #6DBE4D; text-decoration: none; font-weight: 600;">03-5324-2652</a>（代表）
+                        </p>
+                        <p style="color: #1a2332; font-size: 1rem;">
+                            MAIL: <a href="mailto:contact@onetech.jp" style="color: #6DBE4D; text-decoration: none; font-weight: 600;">contact@onetech.jp</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 株式会社One Technology Japan. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">建設DXソリューション | LiDARスキャン × 3Dモデル × AI検査</p>
+        </div>
+    </footer>
+</body>
+</html>

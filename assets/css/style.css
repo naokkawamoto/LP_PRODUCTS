@@ -8,19 +8,20 @@
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    color: #2c3e50;
+    background-color: #f5f7fa;
 }
 
 /* ヘッダー */
 .header {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: #1a2332;
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .header-container {
@@ -53,7 +54,7 @@ body {
 }
 
 .nav a:hover {
-    color: #ffd700;
+    color: #e0e6ed;
 }
 
 /* メインコンテンツ */
@@ -96,7 +97,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.8) 0%, rgba(42, 82, 152, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(26, 35, 50, 0.85) 0%, rgba(30, 60, 114, 0.85) 100%);
     z-index: 2;
 }
 
@@ -126,17 +127,19 @@ body {
 
 .cta-button {
     display: inline-block;
-    background: #ff6b6b;
+    background: #1e3c72;
     color: white;
     padding: 1rem 2rem;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(30, 60, 114, 0.3);
 }
 
 .cta-button:hover {
-    background: #ff5252;
+    background: #2a5298;
+    box-shadow: 0 4px 12px rgba(30, 60, 114, 0.4);
 }
 
 /* セクション */
@@ -144,22 +147,25 @@ body {
     margin-bottom: 3rem;
     background: white;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
 }
 
 .section h2 {
-    color: #1e3c72;
+    color: #1a2332;
     margin-bottom: 1.5rem;
     font-size: 2rem;
-    border-bottom: 3px solid #ffd700;
+    border-bottom: 2px solid #6c757d;
     padding-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .section h3 {
-    color: #2a5298;
+    color: #2c3e50;
     margin: 1.5rem 0 1rem 0;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 /* グリッドレイアウト */
@@ -172,14 +178,16 @@ body {
 
 .card {
     background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .card img {
@@ -191,8 +199,9 @@ body {
 }
 
 .card h3 {
-    color: #1e3c72;
+    color: #1a2332;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 /* 特徴リスト */
@@ -207,14 +216,14 @@ body {
     text-align: center;
     padding: 1.5rem;
     background: #f8f9fa;
-    border-radius: 10px;
-    border-left: 4px solid #ffd700;
+    border-radius: 8px;
+    border-left: 3px solid #6c757d;
 }
 
 .feature-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #1e3c72;
+    color: #2c3e50;
 }
 
 /* 料金表 */
@@ -236,23 +245,26 @@ body {
 }
 
 .pricing-card:hover {
-    border-color: #ffd700;
+    border-color: #6c757d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .pricing-card.featured {
-    border-color: #ff6b6b;
-    transform: scale(1.05);
+    border-color: #1e3c72;
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.15);
 }
 
 .pricing-card h3 {
-    color: #1e3c72;
+    color: #1a2332;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .price {
     font-size: 2.5rem;
-    color: #ff6b6b;
-    font-weight: bold;
+    color: #1e3c72;
+    font-weight: 600;
     margin: 1rem 0;
 }
 
@@ -263,11 +275,12 @@ body {
 
 /* フッター */
 .footer {
-    background: #1e3c72;
+    background: #1a2332;
     color: white;
     padding: 2rem 0;
     text-align: center;
     margin-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer-container {
@@ -348,19 +361,19 @@ body {
 
 .table th {
     background: #f8f9fa;
-    font-weight: bold;
-    color: #1e3c72;
+    font-weight: 600;
+    color: #1a2332;
 }
 
 /* バッジ */
 .badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: #ffd700;
-    color: #1e3c72;
-    border-radius: 15px;
+    background: #6c757d;
+    color: white;
+    border-radius: 4px;
     font-size: 0.875rem;
-    font-weight: bold;
+    font-weight: 600;
     margin: 0.25rem;
 }
 
@@ -376,7 +389,7 @@ body {
 
 .progress-bar {
     height: 100%;
-    background: linear-gradient(90deg, #ffd700, #ff6b6b);
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
     transition: width 0.3s ease;
 }
 

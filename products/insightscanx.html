@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InsightScanXはiPhoneのLiDARスキャンとAIで現場調査を効率化する3DスキャンAIプラットフォーム。点群・簡易BIM・平面図を自動生成し、建設・保全業務と施工品質検査・品質管理DXを支援。建設DXを実現。">
+    <meta name="keywords" content="InsightScanX,LiDARスキャン,3Dモデル,現場調査,効率化,点群データ,簡易BIM,建設DX,AI検査,施工品質検査,品質管理DX,保全業務,建設現場デジタルツイン">
+    <title>InsightScanX（3DスキャンAI）| ONETECH - LiDARスキャンで現場調査・点群データを効率化</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        :root {
+            --primary-blue: #3B63DA;
+            --dark-navy: #151D3A;
+            --accent-blue: #2196F3;
+        }
+
+        .cta-button {
+            background: #3B63DA;
+            color: white;
+        }
+
+        .cta-button:hover {
+            background: #2a4fb8;
+        }
+
+        .pain-section.explicit {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .before-after-item {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .effect-numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .effect-number {
+            text-align: center;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .effect-number .number {
+            font-size: 3rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #3B63DA;
+        }
+        
+        .use-case-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .use-case-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #ffffff;
+            border-radius: 8px;
+            border-left: 3px solid #3B63DA;
+            border: 1px solid #e9ecef;
+        }
+
+        .solution-overview {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #e9ecef;
+        }
+
+        .content-section {
+            background: #ffffff;
+            color: #1a2332;
+            padding: 3rem 2rem;
+            margin: 0;
+        }
+
+        /* プルダウンメニュー */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0 0 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #3B63DA;
+        }
+
+        .dropdown-menu li:first-child a {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-menu li:last-child a {
+            border-radius: 0 0 8px 8px;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 2rem 1rem;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.1);
+                margin-top: 0.5rem;
+            }
+
+            .dropdown-menu a {
+                color: white;
+                padding: 0.5rem 1rem;
+            }
+
+            .dropdown-menu a:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: #ffd700;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="../onetech-lp.html" class="logo">ONETECH</a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="../onetech-lp.html">トップ</a></li>
+                    <li class="dropdown">
+                        <a href="../onetech-lp.html#products" class="dropdown-toggle">プロダクト <span style="font-size: 0.8em;">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="insightscanx.html">InsightScanX（インサイトスキャンエックス）</a></li>
+                            <li><a href="housecan.html">HOUSECAN（ハウスキャン）</a></li>
+                            <li><a href="ai-inspector.html">AI Inspector（エーアイインスペクター）</a></li>
+                            <li><a href="customize.html">カスタマイズ（カスタマイズ）</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- ヒーローセクション -->
+        <section class="hero" style="background: #f8f9fa; height: auto; padding: 4rem 2rem;">
+            <div class="hero-content" style="position: relative; z-index: 1; color: #1a2332; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div>
+                    <h1 style="color: #1a2332; text-shadow: none;">InsightScanX<br>現場をスキャンし、課題を"見える化"</h1>
+                    <p style="color: #495057; text-shadow: none; margin: 1.5rem 0;">LiDARスキャンと3Dモデルで建設・保全業務を効率化<br>建設DX 3DスキャンAIプラットフォーム</p>
+                    <a href="#overview" class="cta-button">詳細を見る</a>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://placehold.jp/600x400.png" alt="InsightScanX - LiDARスキャンで現場調査・点群データを取得する建設DX 3Dスキャン" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- コンテンツセクション -->
+        <section id="overview" class="content-section">
+            <!-- 顕在化されたペインの提示 -->
+            <div class="pain-section explicit">
+                <h3 style="color: #1a2332; font-weight: 600;">現場で起きている具体的な課題</h3>
+                <ul style="list-style: none; padding: 0; color: #495057;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 図面を印刷・準備、メジャーやスケールを用意する必要がある
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 紙とペン、複数人で目視調査・数量拾いが非効率
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 図面に手書き＋写真を別撮影し、記録が分散
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 各業者に紙・電話で発注・確認が時間がかかる
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 帰社後にExcel/Wordで手作業レポート作成が負担
+                    </li>
+                    <li style="padding: 0.75rem 0;">
+                        <strong style="color: #1a2332;">✓</strong> メールやPDFで共有し、過去レポートを探すのに時間がかかる
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 解決策の提示（製品概要） -->
+            <div class="solution-overview">
+                <h3 style="color: #1a2332; font-weight: 600;">製品概要とアプローチ</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; color: #495057;">
+                    InsightScanXは、iPhone LiDAR 3DスキャンとAIを組み合わせた建設DX 3DスキャンAIプラットフォームです。
+                    動画感覚でスキャンしながら現地調査を行い、建物をスキャン→平面図・不具合データ化を自動実行。
+                    スキャンだけで①点群、②簡易BIM、③平面図、④画像一覧を作成し、クラウドでいつでもどこでも確認可能。
+                    建設現場デジタルツインを構築し、BIM連携点群により品質管理DXを実現します。
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #495057;">
+                    AR不具合表示、AI不具合検出・分類（施工不良自動検出、ひび割れ自動検出、かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査）、検査レポート自動生成により、"紙と人手"から"スマホとAI"へ。
+                    現場がここまで変わります。施工品質検査アプリとして、ゼネコン品質管理を支援。建設AI品質検査により、建設現場AI活用を実現します。
+                </p>
+            </div>
+
+            <!-- アプリのインストールとログイン -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">アプリのインストールとログイン</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/1_install_app.webp" alt="InsightScanXアプリのインストールとログイン手順 - App Storeからダウンロード、メールアドレスとパスワードでログイン" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    App StoreからInsightScanXアプリをダウンロードし、メールアドレスとパスワードでログインするだけで、すぐに使い始められます。シンプルな操作で、誰でも簡単に3Dスキャンを開始できます。
+                </p>
+            </div>
+
+            <!-- スキャン機能 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">スキャン機能</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/2_scan_start.webp" alt="InsightScanXのスキャン機能 - 3D生成（点群）モードと簡易BIM+平面図モードの選択、部屋スキャンガイドに従ってスキャン開始" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    用途に応じて2つのスキャンモードから選択できます。「3D生成（点群）」モードは屋外構造物や2D図面が不要な場合に、「簡易BIM+平面図」モードは室内スキャンや2D図面・BIM出力が必要な場合に最適です。ガイドに従ってスキャンするだけで、高精度なデータを取得できます。
+                </p>
+            </div>
+
+            <!-- スキャン結果の確認 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">スキャン結果の確認</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/3_scan_result.webp" alt="InsightScanXのスキャン結果確認 - MESH（リアルな3Dモデル）、BIM（建築情報モデル）、POINT CLOUD（点群データ）、2D平面図（寸法付き）の4つの表示形式" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    スキャンしたデータは、MESH（リアルな3Dモデル）、BIM（建築情報モデル）、POINT CLOUD（点群データ）、2D平面図（寸法付き）の4つの形式で確認できます。用途に応じて最適な表示形式を選択し、詳細な分析や報告書作成に活用できます。
+                </p>
+            </div>
+
+            <!-- AI不具合検出（不具合の追加） -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">AI不具合検出（不具合の追加）</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/4_add_issues_ai.webp" alt="InsightScanXのAI不具合検出機能 - スキャン中に不具合箇所をタップまたは課題ボタンをタップ、AIが画像を解析してカテゴリ・タイトル・解決方法を自動入力" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    スキャン中に不具合箇所をタップするか「課題」ボタンをタップするだけで、AIが画像を解析し、不具合のカテゴリ、タイトル、解決方法を自動的に入力します。手動での入力作業が大幅に削減され、検査効率が向上します。
+                </p>
+            </div>
+
+            <!-- 不具合管理 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">不具合管理</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/5_issue_management.webp" alt="InsightScanXの不具合管理機能 - Web画面の課題メニューから不具合一覧を確認、施設やロケーションでフィルタリング、優先度・ステータス・期限・担当者で管理" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    Web画面の「課題」メニューから、すべての不具合（Issue）を一覧で確認できます。施設やロケーションでフィルタリングでき、優先度、ステータス、期限、担当者で管理。一覧・ボード・ガントチャート・カレンダー表示に対応し、効率的な課題管理を実現します。
+                </p>
+            </div>
+
+            <!-- スキャンデータの比較 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">スキャンデータの比較</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/6_compare_scan.webp" alt="InsightScanXのスキャンデータ比較機能 - 1つのロケーションに複数のスキャンデータを保存、スキャン比較ボタンでスキャンデータ同士やBIMモデル同士を比較" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    1つのロケーションに複数のスキャンデータを保存でき、「スキャン比較」ボタンでデータ同士を比較できます。スキャンデータ比較とBIMモデル比較の2つのモードに対応し、時系列での変化を可視化し、劣化の進行状況や修繕効果を確認できます。
+                </p>
+            </div>
+
+            <!-- 計測機能 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">計測機能</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/measurement_pointcloud.webp" alt="InsightScanXの計測機能 - Mesh・Point Cloud・BIMモードで距離計測ツールを使用、3Dモデル上で2点を選択して垂直距離・水平距離・斜め距離を計測" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    Mesh、Point Cloud、BIMモードでは、距離計測ツールを使用できます。3Dモデル上で2点を選択するだけで、正確な距離を計測できます。垂直距離、水平距離、斜め距離など、様々な計測に対応しています。
+                </p>
+            </div>
+
+            <!-- DXF/IFCファイルの出力 -->
+            <div style="margin: 3rem 0; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">DXF/IFCファイルの出力</h3>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/images/insightscanx/7_dxf_ifc_export.webp" alt="InsightScanXのDXF/IFCファイル出力機能 - BIMモードおよび2D Planモードでエクスポートボタンをクリック、DXF・IFC形式でファイルを出力してCAD・BIMツールと連携" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-size: 1rem; line-height: 1.8; color: #495057; text-align: center; max-width: 800px; margin: 0 auto;">
+                    BIMモードおよび2D Planモードで「エクスポート」ボタンをクリックすると、DXF、IFC形式でファイルを出力できます。CADソフトやBIMツールとの連携が可能で、既存のワークフローにスムーズに統合できます。
+                </p>
+            </div>
+
+            <!-- ビフォーアフター -->
+            <div style="margin: 2rem 0;">
+                <h3 style="margin-bottom: 1.5rem; color: #1a2332; font-weight: 600;">業務プロセスの変革</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <div style="text-align: center;">
+                        <img src="https://placehold.jp/400x300.png" alt="現場調査の導入前 - アナログでの現地調査・図面手書き" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <p style="margin-top: 1rem; color: #495057; font-weight: 600;">導入前：アナログ業務</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="https://placehold.jp/400x300.png" alt="現場調査の導入後 - LiDARスキャン・点群・簡易BIMでデジタル化" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <p style="margin-top: 1rem; color: #495057; font-weight: 600;">導入後：デジタル化</p>
+                    </div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; border: 1px solid #e9ecef;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #dee2e6; color: #1a2332; font-weight: 600;">業務プロセス</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #dee2e6; color: #1a2332; font-weight: 600;">従来のやり方（Before）</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #dee2e6; color: #1a2332; font-weight: 600;">InsightScanX導入後（After）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 1rem; font-weight: 600; color: #1a2332;">現地調査前</td>
+                                <td style="padding: 1rem; color: #495057;">図面を印刷・準備、メジャーやスケールを用意</td>
+                                <td style="padding: 1rem; color: #495057;">📱 スキャンしながら2D/3D図面を自動生成</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 1rem; font-weight: 600; color: #1a2332;">現地調査（目視）</td>
+                                <td style="padding: 1rem; color: #495057;">紙とペン、複数人で目視調査／数量</td>
+                                <td style="padding: 1rem; color: #495057;">🔍 スキャン中にAIが不具合・数量を自動検出</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 1rem; font-weight: 600; color: #1a2332;">現地記録</td>
+                                <td style="padding: 1rem; color: #495057;">図面に手書き＋写真を別撮影</td>
+                                <td style="padding: 1rem; color: #495057;">📸 スキャンしながら自動で画像を取得・保存</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 1rem; font-weight: 600; color: #1a2332;">補修調整</td>
+                                <td style="padding: 1rem; color: #495057;">各業者に紙・電話で発注／確認</td>
+                                <td style="padding: 1rem; color: #495057;">🧱 課題データから補修業者へ直接発注・進捗追跡</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 1rem; font-weight: 600; color: #1a2332;">レポート作成</td>
+                                <td style="padding: 1rem; color: #495057;">帰社後にExcel／Wordで手作業</td>
+                                <td style="padding: 1rem; color: #495057;">⚡ ボタン一つでレポート自動生成</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 1rem; font-weight: 600; color: #1a2332;">状況共有</td>
+                                <td style="padding: 1rem; color: #495057;">メールやPDFで共有</td>
+                                <td style="padding: 1rem; color: #495057;">🌐 3Dビュー＋課題チャットでリアルタイム共有</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem; font-weight: 600; color: #1a2332;">複数物件管理</td>
+                                <td style="padding: 1rem; color: #495057;">過去レポートを探すのに時間</td>
+                                <td style="padding: 1rem; color: #495057;">☁ クラウドで全物件を一括管理</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 1.1rem; font-weight: 600; text-align: center; color: #1a2332;">
+                    "紙と人手"から、"スマホとAI"へ。現場がここまで変わる。
+                </p>
+            </div>
+
+            <!-- 特徴 -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">差別化ポイント</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="iPhone LiDAR 3Dスキャンで現場調査・点群データを取得" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">iPhone LiDAR 3Dスキャン（iOS専用）</h4>
+                        <p style="color: #495057;">動画感覚でスキャンしながら現地調査。iPhoneのLiDAR機能を活用し、誰でも簡単に高精度な点群データを取得できます。建設現場スキャンアプリとして、建設DX 3Dスキャンを実現。建設現場デジタルツインの基盤となる点群データを生成します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="AI不具合検出・施工品質検査で品質管理DXを実現" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">AI不具合検出・施工品質検査</h4>
+                        <p style="color: #495057;">スキャン中にAIが施工不良を自動検出。ひび割れ自動検出、かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査に対応。AR不具合表示で課題の位置を3D上で確認可能。建設AI品質検査により、ゼネコン品質管理を支援します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="BIM連携・点群データで建設現場デジタルツインを構築" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">BIM連携・点群データAI解析</h4>
+                        <p style="color: #495057;">スキャンだけで①点群、②簡易BIM、③平面図、④画像一覧を作成。BIM連携点群により、建設現場デジタルツインを構築。点群データAI解析で品質管理DXを実現。クラウドでいつでもどこでも、点群と複数写真、課題位置を確認可能。</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="検査レポート自動生成で建設DX・品質管理DXを効率化" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">検査レポート自動生成・品質管理DX</h4>
+                        <p style="color: #495057;">検査レポート自動生成により、レポート作成不要。業者とチャットで課題管理、複数案件管理。3D位置連携、課題を時系列で管理、複数の担当者・プロジェクトに対応。品質管理DXにより、建設現場AI活用を実現します。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 導入効果（数値） -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">導入効果（定量的な成果）</h3>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0; border: 1px solid #e9ecef;">
+                    <h4 style="margin-bottom: 1.5rem; color: #1a2332; font-weight: 600;">よくある調査業務での効果</h4>
+                    <div class="effect-numbers">
+                        <div class="effect-number">
+                            <span class="number">8時間</span>
+                            <span>→ 2.5時間</span>
+                        </div>
+                        <div class="effect-number">
+                            <span class="number">61%</span>
+                            <span>時間削減</span>
+                        </div>
+                        <div class="effect-number">
+                            <span class="number">55時間</span>
+                            <span>月間削減（10回発生時）</span>
+                        </div>
+                        <div class="effect-number">
+                            <span class="number">17万円</span>
+                            <span>月間コスト削減</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: #ffffff; border-radius: 8px; font-size: 0.9rem; border: 1px solid #e9ecef; color: #495057;">
+                        <strong style="color: #1a2332;">計算根拠：</strong>人件費コスト月間50万円と仮定、時給換算＝3,125円、このような作業が月に10回発生、稼働日数20日/毎月
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="color: #1a2332; font-weight: 600;">作業時間の内訳（Before → After）</h4>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            <strong style="color: #1a2332;">現地調査：</strong>150分 → 65分（57%削減）
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            <strong style="color: #1a2332;">日報作成：</strong>120分 → 10分（92%削減）
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            <strong style="color: #1a2332;">現場最終確認：</strong>60分 → 30分（50%削減）
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            <strong style="color: #1a2332;">最終報告書作成：</strong>70分 → 20分（71%削減）
+                        </li>
+                        <li style="padding: 0.75rem 0; color: #495057;">
+                            <strong style="color: #1a2332;">再調査・移動：</strong>20分 → 5分（75%削減）
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 応用例・ユースケース -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">応用例・想定利用シーン</h3>
+                <ul class="use-case-list">
+                    <li>
+                        <strong>👷 建設会社：施工品質検査・ゼネコン品質管理</strong><br>
+                        建設現場スキャンアプリとして、iPhone LiDAR 3Dスキャンで建物をスキャン→平面図・不具合データ化。施工品質検査アプリとして、施工不良自動検出、ひび割れ自動検出、かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査を実現。建設現場デジタルツインにより、設計前の現況把握・積算準備を効率化。
+                    </li>
+                    <li>
+                        <strong>🏢 大規模施設保全：品質管理DX（導入実績あり）</strong><br>
+                        定期点検時の劣化箇所をAI自動検出。点群データAI解析により過去履歴の可視化→修繕判断を支援。BIM連携点群で担当者交代・外注時でも引き継ぎが容易。品質管理DXにより、建設現場AI活用を実現。
+                    </li>
+                    <li>
+                        <strong>🏨 ホテル・公共施設・カラオケなどの保全管理</strong><br>
+                        商業施設・オフィスビルの営繕管理を効率化。建設現場デジタルツインにより、3Dデータ＋AIで点検記録を一元化。AR不具合表示で課題位置を可視化。複数物件を修繕会社などと連携。
+                    </li>
+                    <li>
+                        <strong>📋 現地調査アプリ：写真付き現調レポート</strong><br>
+                        現地調査アプリとして、カラオケルーム、公共施設、オフィス、木造住宅など、様々な建物タイプに対応。点群、簡易BIM、平面図を自動生成。LiDAR間取り作成により、間取り図作成アプリとしても活用可能（部分対応）。検査レポート自動生成で調査・報告・修繕までを最短ルートでDX化。
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+            <!-- CTAセクション -->
+        <section id="contact" class="section" style="background: #ffffff;">
+            <h2 style="color: #1a2332; border-bottom: 2px solid #6c757d; padding-bottom: 1rem; margin-bottom: 2rem; text-align: center; font-weight: 600;">
+                まずは無料でお試しください
+            </h2>
+            <div style="text-align: center; margin: 2rem 0;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #495057;">
+                    InsightScanXで現場調査を効率化しませんか？<br>
+                    お気軽にお問い合わせください。
+                </p>
+                <div id="contact-form" style="max-width: 600px; margin: 3rem auto; background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid #e9ecef;">
+                    <h3 style="color: #1a2332; margin-bottom: 1.5rem; text-align: center; font-weight: 600;">お問い合わせフォーム</h3>
+                    <form style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="text" placeholder="お名前" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <input type="email" placeholder="メールアドレス" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <input type="tel" placeholder="電話番号" style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <select required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                            <option value="">お問い合わせ種別を選択</option>
+                            <option value="material">資料請求</option>
+                            <option value="demo">デモ申し込み</option>
+                            <option value="inquiry">お問い合わせ</option>
+                        </select>
+                        <textarea placeholder="お問い合わせ内容" rows="5" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; resize: vertical; background: white;"></textarea>
+                        <button type="submit" class="cta-button" style="background: #3B63DA; color: white; border: none; cursor: pointer; padding: 1rem 2rem; font-size: 1.1rem; font-weight: 600;">送信する</button>
+                    </form>
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #dee2e6; text-align: center;">
+                        <p style="color: #495057; margin-bottom: 1rem; font-size: 0.95rem;">お急ぎの場合は、直接お電話またはメールでお問い合わせください</p>
+                        <p style="color: #1a2332; font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600;">
+                            <strong>株式会社One Technology Japan</strong>
+                        </p>
+                        <p style="color: #1a2332; font-size: 1.1rem; margin-bottom: 0.5rem;">
+                            TEL: <a href="tel:03-5324-2652" style="color: #3B63DA; text-decoration: none; font-weight: 600;">03-5324-2652</a>（代表）
+                        </p>
+                        <p style="color: #1a2332; font-size: 1rem;">
+                            MAIL: <a href="mailto:contact@onetech.jp" style="color: #3B63DA; text-decoration: none; font-weight: 600;">contact@onetech.jp</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 株式会社One Technology Japan. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">建設DXソリューション | LiDARスキャン × 3Dモデル × AI検査</p>
+        </div>
+    </footer>
+</body>
+</html>

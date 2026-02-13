@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEOリファレンス - ONETECH 全ページ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+            margin: 0;
+        }
+        .header {
+            background: #1a2332;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        .header .logo:hover {
+            opacity: 0.8;
+        }
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+        .header-nav a:hover {
+            opacity: 0.8;
+        }
+        .back-link {
+            background: #3B63DA;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            background: #2a4fb8;
+            opacity: 1;
+        }
+        .content-wrapper {
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a2332;
+            border-bottom: 3px solid #3B63DA;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .page-section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3B63DA;
+        }
+        .page-section h2 {
+            color: #1a2332;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .seo-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+        }
+        .seo-item h3 {
+            color: #3B63DA;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .seo-item p, .seo-item code {
+            color: #495057;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .seo-item code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+            display: block;
+            white-space: pre-wrap;
+            word-break: break-all;
+            margin-top: 0.5rem;
+        }
+        .keywords-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .keyword-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid #bbdefb;
+        }
+        .heading-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .heading-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .heading-list li:last-child {
+            border-bottom: none;
+        }
+        .heading-list strong {
+            color: #1a2332;
+            display: inline-block;
+            min-width: 60px;
+        }
+        .image-alt-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .image-alt-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 0.9rem;
+        }
+        .image-alt-list li:last-child {
+            border-bottom: none;
+        }
+        .file-path {
+            color: #6c757d;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="onetech-lp.html" class="logo">ONETECH</a>
+            <nav class="header-nav">
+                <a href="onetech-lp.html" class="back-link">メインページに戻る</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content-wrapper">
+    <div class="container">
+        <h1>ONETECH 全ページ SEOリファレンス</h1>
+        <p style="color: #6c757d; margin-bottom: 2rem;">各ページのタイトル、ディスクリプション、キーワード、見出し、画像alt属性をまとめたリファレンスドキュメント</p>
+
+        <!-- メインページ -->
+        <div class="page-section">
+            <h2>1. メインページ（ランディングページ）</h2>
+            <p class="file-path">ファイル: onetech-lp.html</p>
+
+            <div class="seo-item">
+                <h3>タイトル（Title）</h3>
+                <code>建設DXソリューション | ONETECH - LiDARスキャン×3Dモデル×AI検査で現場調査を効率化</code>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタディスクリプション（Meta Description）</h3>
+                <p>建設DXで現場調査を効率化。LiDARスキャン・3Dモデル・点群データ・AI検査で施工管理と建物診断をワンストップ提供。ホームインスペクション、リノベーションアプリ、品質管理DXで建設業界の人手不足・2024年問題を解決する建設テックプラットフォーム。</p>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタキーワード（Meta Keywords）</h3>
+                <div class="keywords-list">
+                    <span class="keyword-tag">建設DX</span>
+                    <span class="keyword-tag">LiDARスキャン</span>
+                    <span class="keyword-tag">3Dモデル</span>
+                    <span class="keyword-tag">現場調査</span>
+                    <span class="keyword-tag">効率化</span>
+                    <span class="keyword-tag">リノベーションアプリ</span>
+                    <span class="keyword-tag">AI検査</span>
+                    <span class="keyword-tag">ホームインスペクション</span>
+                    <span class="keyword-tag">建設業界</span>
+                    <span class="keyword-tag">人手不足</span>
+                    <span class="keyword-tag">2024年問題</span>
+                    <span class="keyword-tag">点群データ</span>
+                    <span class="keyword-tag">施工管理</span>
+                    <span class="keyword-tag">建物診断</span>
+                    <span class="keyword-tag">建設テック</span>
+                    <span class="keyword-tag">簡易BIM</span>
+                    <span class="keyword-tag">品質管理DX</span>
+                    <span class="keyword-tag">現地調査アプリ</span>
+                </div>
+            </div>
+
+            <div class="seo-item">
+                <h3>主要見出し（Headings）</h3>
+                <ul class="heading-list">
+                    <li><strong>H1:</strong> 建設DXで現場調査を効率化<br>LiDARスキャン×3Dモデル×AI検査</li>
+                    <li><strong>H2:</strong> 建設業界が直面する構造的課題</li>
+                    <li><strong>H2:</strong> ONETECHプロダクトラインナップ</li>
+                    <li><strong>H3:</strong> 深刻化する建設業界の危機</li>
+                    <li><strong>H4:</strong> 業界DX率</li>
+                    <li><strong>H4:</strong> 労働生産性</li>
+                    <li><strong>H4:</strong> 建設就業者（2030年）</li>
+                    <li><strong>H4:</strong> 品質担当の事務作業</li>
+                    <li><strong>H4:</strong> 建設業界が抱える根本的な課題</li>
+                    <li><strong>H3:</strong> InsightScanX / HOUSECAN / AI Inspector / カスタマイズソリューション</li>
+                    <li><strong>H3:</strong> 📄 資料請求</li>
+                    <li><strong>H3:</strong> 💬 お問い合わせ</li>
+                    <li><strong>H3:</strong> 🎬 デモ申し込み</li>
+                    <li><strong>H3:</strong> まずは無料でお試しください</li>
+                </ul>
+            </div>
+
+            <div class="seo-item">
+                <h3>画像Alt属性（Image Alt）</h3>
+                <ul class="image-alt-list">
+                    <li>LiDARスキャンと3Dモデルで現場調査を効率化する建設DXソリューション</li>
+                    <li>建設業界のDX率と建設DXの必要性</li>
+                    <li>建設業界の労働生産性と現場調査の効率化</li>
+                    <li>建設就業者数の人手不足と2024年問題</li>
+                    <li>品質担当の事務作業と施工管理の効率化</li>
+                    <li>InsightScanX - LiDARスキャンと3Dモデルで現場調査・点群データを効率化</li>
+                    <li>HOUSECAN - 建築調査・リノベーションアプリで簡易BIMと見積りを自動化</li>
+                    <li>AI Inspector - AI検査で建物診断・ホームインスペクションを効率化</li>
+                    <li>建設DX・業務最適化のカスタマイズソリューション</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- InsightScanXページ -->
+        <div class="page-section">
+            <h2>2. InsightScanXページ</h2>
+            <p class="file-path">ファイル: products/insightscanx.html</p>
+
+            <div class="seo-item">
+                <h3>タイトル（Title）</h3>
+                <code>InsightScanX（3DスキャンAI）| ONETECH - LiDARスキャンで現場調査・点群データを効率化</code>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタディスクリプション（Meta Description）</h3>
+                <p>InsightScanXはiPhoneのLiDARスキャンとAIで現場調査を効率化する3DスキャンAIプラットフォーム。点群・簡易BIM・平面図を自動生成し、建設・保全業務と施工品質検査・品質管理DXを支援。建設DXを実現。</p>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタキーワード（Meta Keywords）</h3>
+                <div class="keywords-list">
+                    <span class="keyword-tag">InsightScanX</span>
+                    <span class="keyword-tag">LiDARスキャン</span>
+                    <span class="keyword-tag">3Dモデル</span>
+                    <span class="keyword-tag">現場調査</span>
+                    <span class="keyword-tag">効率化</span>
+                    <span class="keyword-tag">点群データ</span>
+                    <span class="keyword-tag">簡易BIM</span>
+                    <span class="keyword-tag">建設DX</span>
+                    <span class="keyword-tag">AI検査</span>
+                    <span class="keyword-tag">施工品質検査</span>
+                    <span class="keyword-tag">品質管理DX</span>
+                    <span class="keyword-tag">保全業務</span>
+                    <span class="keyword-tag">建設現場デジタルツイン</span>
+                </div>
+            </div>
+
+            <div class="seo-item">
+                <h3>主要見出し（Headings）</h3>
+                <ul class="heading-list">
+                    <li><strong>H1:</strong> InsightScanX<br>現場をスキャンし、課題を"見える化"</li>
+                    <li><strong>H3:</strong> 現場で起きている具体的な課題</li>
+                    <li><strong>H3:</strong> 製品概要とアプローチ</li>
+                    <li><strong>H3:</strong> アプリのインストールとログイン</li>
+                    <li><strong>H3:</strong> スキャン機能</li>
+                    <li><strong>H3:</strong> スキャン結果の確認</li>
+                    <li><strong>H3:</strong> AI不具合検出（不具合の追加）</li>
+                    <li><strong>H3:</strong> 不具合管理</li>
+                    <li><strong>H3:</strong> スキャンデータの比較</li>
+                    <li><strong>H3:</strong> 計測機能</li>
+                    <li><strong>H3:</strong> DXF/IFCファイルの出力</li>
+                    <li><strong>H3:</strong> 業務プロセスの変革</li>
+                    <li><strong>H3:</strong> 差別化ポイント</li>
+                    <li><strong>H4:</strong> iPhone LiDAR 3Dスキャン（iOS専用）</li>
+                    <li><strong>H4:</strong> AI不具合検出・施工品質検査</li>
+                    <li><strong>H4:</strong> BIM連携・点群データAI解析</li>
+                    <li><strong>H4:</strong> 検査レポート自動生成・品質管理DX</li>
+                    <li><strong>H4:</strong> よくある調査業務での効果</li>
+                    <li><strong>H4:</strong> 作業時間の内訳（Before → After）</li>
+                </ul>
+            </div>
+
+            <div class="seo-item">
+                <h3>画像Alt属性（Image Alt）</h3>
+                <ul class="image-alt-list">
+                    <li>InsightScanX - LiDARスキャンで現場調査・点群データを取得する建設DX 3Dスキャン</li>
+                    <li>InsightScanXアプリのインストールとログイン手順 - App Storeからダウンロード、メールアドレスとパスワードでログイン</li>
+                    <li>InsightScanXのスキャン機能 - 3D生成（点群）モードと簡易BIM+平面図モードの選択、部屋スキャンガイドに従ってスキャン開始</li>
+                    <li>InsightScanXのスキャン結果確認 - MESH・BIM・POINT CLOUD・2D平面図の4つの表示形式</li>
+                    <li>InsightScanXのAI不具合検出機能 - スキャン中に不具合箇所をタップ、AIがカテゴリ・タイトル・解決方法を自動入力</li>
+                    <li>InsightScanXの不具合管理機能 - Web画面の課題メニューから不具合一覧・フィルタリング・優先度・ステータスで管理</li>
+                    <li>InsightScanXのスキャンデータ比較機能 - スキャン比較ボタンでスキャンデータ同士やBIMモデル同士を比較</li>
+                    <li>InsightScanXの計測機能 - Mesh・Point Cloud・BIMモードで距離計測、垂直・水平・斜め距離を計測</li>
+                    <li>InsightScanXのDXF/IFCファイル出力機能 - エクスポートでDXF・IFC形式、CAD・BIMツールと連携</li>
+                    <li>現場調査の導入前 - アナログでの現地調査・図面手書き</li>
+                    <li>現場調査の導入後 - LiDARスキャン・点群・簡易BIMでデジタル化</li>
+                    <li>iPhone LiDAR 3Dスキャンで現場調査・点群データを取得</li>
+                    <li>AI不具合検出・施工品質検査で品質管理DXを実現</li>
+                    <li>BIM連携・点群データで建設現場デジタルツインを構築</li>
+                    <li>検査レポート自動生成で建設DX・品質管理DXを効率化</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HOUSECANページ -->
+        <div class="page-section">
+            <h2>3. HOUSECANページ</h2>
+            <p class="file-path">ファイル: products/housecan.html</p>
+
+            <div class="seo-item">
+                <h3>タイトル（Title）</h3>
+                <code>HOUSECAN（建築調査アプリ）| ONETECH - LiDARスキャンで簡易BIM・見積りを自動化</code>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタディスクリプション（Meta Description）</h3>
+                <p>HOUSECANはiPhone・iPadで使える建築調査・リノベーションアプリ。LiDARスキャンで簡易BIM・図面を自動生成し、見積り・資金計画まで自動出力。現地調査アプリとして建設DXと品質管理DXを実現。</p>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタキーワード（Meta Keywords）</h3>
+                <div class="keywords-list">
+                    <span class="keyword-tag">HOUSECAN</span>
+                    <span class="keyword-tag">リノベーションアプリ</span>
+                    <span class="keyword-tag">建築調査</span>
+                    <span class="keyword-tag">LiDARスキャン</span>
+                    <span class="keyword-tag">簡易BIM</span>
+                    <span class="keyword-tag">見積り</span>
+                    <span class="keyword-tag">資金計画</span>
+                    <span class="keyword-tag">現地調査アプリ</span>
+                    <span class="keyword-tag">建設DX</span>
+                    <span class="keyword-tag">点群データ</span>
+                    <span class="keyword-tag">リフォーム現調</span>
+                </div>
+            </div>
+
+            <div class="seo-item">
+                <h3>主要見出し（Headings）</h3>
+                <ul class="heading-list">
+                    <li><strong>H1:</strong> HOUSECAN<br>iPhone・iPadで使える建築調査・記録アプリ</li>
+                    <li><strong>H3:</strong> 現場で起きている具体的な課題</li>
+                    <li><strong>H3:</strong> 製品概要とアプローチ</li>
+                    <li><strong>H4:</strong> ❌ 導入前</li>
+                    <li><strong>H4:</strong> ✅ 導入後</li>
+                    <li><strong>H3:</strong> 差別化ポイント</li>
+                    <li><strong>H4:</strong> iPhone LiDAR 3Dスキャン：間取り図作成アプリ・フロアプラン自動作成</li>
+                    <li><strong>H4:</strong> 見積もり作成アプリ：積算・見積り・資金計画が自動で出力</li>
+                    <li><strong>H4:</strong> 施工品質検査アプリ：品質管理DX</li>
+                    <li><strong>H4:</strong> 写真付き現調レポート・AR不具合表示・検査レポート自動生成</li>
+                    <li><strong>H3:</strong> 導入効果（定量的な成果）</li>
+                    <li><strong>H4:</strong> 主な効果</li>
+                    <li><strong>H3:</strong> 応用例・想定利用シーン</li>
+                    <li><strong>H3:</strong> 料金プラン</li>
+                    <li><strong>H4:</strong> Lite</li>
+                </ul>
+            </div>
+
+            <div class="seo-item">
+                <h3>画像Alt属性（Image Alt）</h3>
+                <ul class="image-alt-list">
+                    <li>HOUSECAN - 建築調査・リノベーションアプリでLiDARスキャンと簡易BIM</li>
+                    <li>建築調査・現地調査の導入前（アナログ運用）</li>
+                    <li>建築調査・簡易BIM・見積り自動化の導入後（建設DX）</li>
+                    <li>iPhone LiDAR 3Dスキャンで建築調査・簡易BIM・間取り図を自動作成</li>
+                    <li>見積り・資金計画の自動出力でリノベーションアプリを効率化</li>
+                    <li>施工品質検査・品質管理DXで建設現場デジタルツインを構築</li>
+                    <li>写真付き現調レポート・検査レポート自動生成で建設DX</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- AI Inspectorページ -->
+        <div class="page-section">
+            <h2>4. AI Inspectorページ</h2>
+            <p class="file-path">ファイル: products/ai-inspector.html</p>
+
+            <div class="seo-item">
+                <h3>タイトル（Title）</h3>
+                <code>AI Inspector（AI建物診断）| ONETECH - ホームインスペクション・施工品質検査をAIで効率化</code>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタディスクリプション（Meta Description）</h3>
+                <p>AI InspectorはAI検査で建物診断・欠陥検出を自動化。画像認識AIと施工品質検査でホームインスペクションの精度と効率を向上。品質管理DX・建設AIで建設現場の建物診断を支援。</p>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタキーワード（Meta Keywords）</h3>
+                <div class="keywords-list">
+                    <span class="keyword-tag">AI Inspector</span>
+                    <span class="keyword-tag">AI検査</span>
+                    <span class="keyword-tag">建物診断</span>
+                    <span class="keyword-tag">欠陥検出</span>
+                    <span class="keyword-tag">ホームインスペクション</span>
+                    <span class="keyword-tag">画像認識AI</span>
+                    <span class="keyword-tag">施工品質検査</span>
+                    <span class="keyword-tag">品質管理DX</span>
+                    <span class="keyword-tag">建設AI</span>
+                    <span class="keyword-tag">点群データAI解析</span>
+                </div>
+            </div>
+
+            <div class="seo-item">
+                <h3>主要見出し（Headings）</h3>
+                <ul class="heading-list">
+                    <li><strong>H1:</strong> AI Inspector<br>AI建物診断・ホームインスペクション</li>
+                    <li><strong>H3:</strong> 現場で起きている具体的な課題</li>
+                    <li><strong>H3:</strong> 「インスペクション」の活用促進の背景</li>
+                    <li><strong>H3:</strong> 製品概要とアプローチ</li>
+                    <li><strong>H3:</strong> 業務プロセスの変革</li>
+                    <li><strong>H4:</strong> ❌ 導入前</li>
+                    <li><strong>H4:</strong> ✅ 導入後</li>
+                    <li><strong>H3:</strong> 検査導線優先設計</li>
+                    <li><strong>H3:</strong> 直感操作で検査完了</li>
+                    <li><strong>H3:</strong> スマホだけでハウスインスペクション完結</li>
+                    <li><strong>H3:</strong> 差別化ポイント</li>
+                    <li><strong>H4:</strong> 建設AI品質検査：施工品質検査アプリ</li>
+                    <li><strong>H4:</strong> 建設現場スキャンアプリ：現地調査アプリ・リフォーム現調アプリ</li>
+                    <li><strong>H4:</strong> 点群データAI解析：建設現場デジタルツイン</li>
+                    <li><strong>H4:</strong> 写真付き現調レポート：無料プラン提供</li>
+                    <li><strong>H3:</strong> 導入効果（定量的な成果）</li>
+                    <li><strong>H3:</strong> 応用例・想定利用シーン</li>
+                </ul>
+            </div>
+
+            <div class="seo-item">
+                <h3>画像Alt属性（Image Alt）</h3>
+                <ul class="image-alt-list">
+                    <li>AI Inspector - AI検査で建物診断・ホームインスペクションを効率化</li>
+                    <li>インスペクションの活用促進の背景 - 長寿命化・法改正・中古住宅活性化の循環図</li>
+                    <li>AI Inspector導入前後の業務プロセス比較 - インスペクション準備・現地調査・記録・レポート作成・複数物件管理の効率化</li>
+                    <li>AI Inspectorの検査導線優先設計 - 検査開始・屋外検査・屋内検査・傾斜検査の効率的な検査フロー</li>
+                    <li>AI Inspectorの直感操作 - 図面拡大・検査項目プロット・結果登録・写真添付の4ステップで検査完了</li>
+                    <li>AI Inspectorでスマホだけで完結 - 検査項目登録・検査漏れ防止・レポート閲覧・PDF出力（国交省準拠）まで</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- カスタマイズページ -->
+        <div class="page-section">
+            <h2>5. カスタマイズページ</h2>
+            <p class="file-path">ファイル: products/customize.html</p>
+
+            <div class="seo-item">
+                <h3>タイトル（Title）</h3>
+                <code>カスタマイズソリューション（建設DX・業務最適化）| ONETECH - 点群・LiDAR・BIMで御社の課題を解決</code>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタディスクリプション（Meta Description）</h3>
+                <p>ONETECHのカスタマイズソリューション。点群処理・LiDARスキャン・BIMをコアに建設DXと業務最適化を実現。業種別カスタマイズ事例と補助金活用で土木・建築・住宅・商業施設などの課題を解決。</p>
+            </div>
+
+            <div class="seo-item">
+                <h3>メタキーワード（Meta Keywords）</h3>
+                <div class="keywords-list">
+                    <span class="keyword-tag">カスタマイズ</span>
+                    <span class="keyword-tag">建設DX</span>
+                    <span class="keyword-tag">LiDARスキャン</span>
+                    <span class="keyword-tag">点群データ</span>
+                    <span class="keyword-tag">点群処理</span>
+                    <span class="keyword-tag">BIM</span>
+                    <span class="keyword-tag">業務最適化</span>
+                    <span class="keyword-tag">業種別</span>
+                    <span class="keyword-tag">補助金</span>
+                    <span class="keyword-tag">現地調査</span>
+                    <span class="keyword-tag">施工管理</span>
+                    <span class="keyword-tag">建物診断</span>
+                </div>
+            </div>
+
+            <div class="seo-item">
+                <h3>主要見出し（Headings）</h3>
+                <ul class="heading-list">
+                    <li><strong>H1:</strong> カスタマイズのご提案</li>
+                    <li><strong>H2:</strong> 建設DX・業務最適化のカスタマイズのご提案</li>
+                    <li><strong>H2:</strong> 課題解決事例</li>
+                    <li><strong>H2:</strong> 私たちの技術優位性と特徴</li>
+                    <li><strong>H3:</strong> コア / LiDARスキャン</li>
+                    <li><strong>H2:</strong> 補助金活用しソフトウェア開発</li>
+                    <li><strong>H2:</strong> 応用例</li>
+                    <li><strong>H3:</strong> 1. リノベーションアプリとWEBシステム</li>
+                    <li><strong>H3:</strong> 2. 施設管理アプリとWEBシステム</li>
+                    <li><strong>H3:</strong> 3. 商業施設管理アプリとWEBシステム</li>
+                    <li><strong>H3:</strong> 私たちの技術で解決できる</li>
+                </ul>
+            </div>
+
+            <div class="seo-item">
+                <h3>画像Alt属性（Image Alt）</h3>
+                <ul class="image-alt-list">
+                    <li>建設DX・業務最適化のカスタマイズソリューション - 点群・LiDAR・BIM</li>
+                    <li>点群処理・LiDARスキャン・BIMをコアとした建設DXアーキテクチャ</li>
+                    <li>リノベーションアプリ・現地調査から建設DXまでカスタマイズ事例</li>
+                    <li>施設管理アプリ・点群・BIMで業務最適化するカスタマイズ事例</li>
+                    <li>商業施設管理アプリ・建設DXで営繕管理を効率化するカスタマイズ事例</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #dee2e6; text-align: center; color: #6c757d;">
+            <p>最終更新: 2026年2月12日</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">このドキュメントはSEO最適化のためのリファレンスとして作成されました。</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

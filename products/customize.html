@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONETECHのカスタマイズソリューション。点群処理・LiDARスキャン・BIMをコアに建設DXと業務最適化を実現。業種別カスタマイズ事例と補助金活用で土木・建築・住宅・商業施設などの課題を解決。">
+    <meta name="keywords" content="カスタマイズ,建設DX,LiDARスキャン,点群データ,点群処理,BIM,業務最適化,業種別,補助金,現地調査,施工管理,建物診断">
+    <title>カスタマイズソリューション（建設DX・業務最適化）| ONETECH - 点群・LiDAR・BIMで御社の課題を解決</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        :root {
+            --primary-blue: #1a2332;
+            --accent-blue: #3B63DA;
+            --accent-red: #dc3545;
+            --light-blue: #E6F0F8;
+            --light-grey: #F0F3F5;
+        }
+
+        .hero {
+            background: #f8f9fa;
+            height: auto;
+            padding: 4rem 2rem;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #1a2332;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            color: #1a2332;
+            text-shadow: none;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            color: #495057;
+            text-shadow: none;
+            font-size: 1.2rem;
+        }
+
+        .content-section {
+            background: #ffffff;
+            color: #1a2332;
+            padding: 3rem 2rem;
+            margin: 0;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 3rem 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .intro-section h2 {
+            color: #1a2332;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .intro-section .subtitle {
+            color: #dc3545;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .intro-section .message {
+            color: #495057;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+        }
+
+        .intro-section .capability {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            margin-top: 2rem;
+        }
+
+        .intro-section .capability h3 {
+            color: #1a2332;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .intro-section .capability p {
+            color: #495057;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .case-studies-section {
+            margin: 4rem 0;
+        }
+
+        .case-studies-section h2 {
+            color: #1a2332;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .case-studies-intro {
+            text-align: center;
+            color: #495057;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .case-studies-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .case-studies-table thead {
+            background: #1a2332;
+            color: white;
+        }
+
+        .case-studies-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .case-studies-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            color: #495057;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+
+        .case-studies-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .case-studies-table tbody tr:hover {
+            background: #f0f3f5;
+        }
+
+        .case-studies-table .target {
+            font-weight: 600;
+            color: #1a2332;
+        }
+
+        .case-studies-table .client {
+            font-weight: 600;
+            color: #1a2332;
+        }
+
+        .case-studies-table .solutions {
+            color: #3B63DA;
+            font-weight: 600;
+        }
+
+        .case-studies-table .feasible {
+            font-weight: 600;
+        }
+
+        .case-studies-table .feasible.possible {
+            color: #6DBE4D;
+        }
+
+        .case-studies-table .feasible.concern {
+            color: #ff9800;
+        }
+
+        .case-studies-table .feasible.challenge {
+            color: #dc3545;
+        }
+
+        .technology-section {
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .technology-section h2 {
+            color: #1a2332;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .technology-section .description {
+            text-align: center;
+            color: #495057;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .core-diagram {
+            background: #E6F0F8;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            position: relative;
+            min-height: 500px;
+        }
+
+        .core-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: #1a2332;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .core-center h3 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .core-center p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.85rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .core-feature {
+            position: absolute;
+            background: #ffffff;
+            border: 2px solid #1a2332;
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            color: #1a2332;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .core-feature.top-left { top: 10%; left: 10%; }
+        .core-feature.top-right { top: 10%; right: 10%; }
+        .core-feature.mid-left { top: 50%; left: 5%; transform: translateY(-50%); }
+        .core-feature.mid-right { top: 50%; right: 5%; transform: translateY(-50%); }
+        .core-feature.bottom-left { bottom: 10%; left: 10%; }
+        .core-feature.bottom-right { bottom: 10%; right: 10%; }
+        .core-feature.bottom-center-left { bottom: 5%; left: 30%; }
+        .core-feature.bottom-center-right { bottom: 5%; right: 30%; }
+
+        .subsidy-section {
+            margin: 4rem 0;
+        }
+
+        .subsidy-section h2 {
+            color: #1a2332;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .subsidy-section .subtitle {
+            color: #dc3545;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .subsidy-section .intro {
+            text-align: center;
+            color: #495057;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .subsidy-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .subsidy-table thead {
+            background: #1a2332;
+            color: white;
+        }
+
+        .subsidy-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .subsidy-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            color: #495057;
+            font-size: 0.85rem;
+            vertical-align: top;
+        }
+
+        .subsidy-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .subsidy-table tbody tr:hover {
+            background: #f0f3f5;
+        }
+
+        .use-cases-section {
+            margin: 4rem 0;
+        }
+
+        .use-cases-section h2 {
+            color: #1a2332;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .use-case-item {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .use-case-item h3 {
+            color: #1a2332;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .use-case-item .description {
+            color: #495057;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .use-case-item .budget {
+            color: #1a2332;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .use-case-item .features {
+            color: #495057;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .core-diagram {
+                min-height: 400px;
+            }
+
+            .core-center {
+                width: 150px;
+                height: 150px;
+                font-size: 0.8rem;
+            }
+
+            .core-feature {
+                width: 100px;
+                height: 100px;
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
+
+            .case-studies-table,
+            .subsidy-table {
+                font-size: 0.8rem;
+            }
+
+            .case-studies-table th,
+            .case-studies-table td,
+            .subsidy-table th,
+            .subsidy-table td {
+                padding: 0.5rem;
+            }
+        }
+
+        .cta-button {
+            background: #1e3c72;
+            color: white;
+        }
+
+        .cta-button:hover {
+            background: #2a5298;
+        }
+
+        /* プルダウンメニュー */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0 0 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #1a2332;
+        }
+
+        .dropdown-menu li:first-child a {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-menu li:last-child a {
+            border-radius: 0 0 8px 8px;
+        }
+
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.1);
+                margin-top: 0.5rem;
+            }
+
+            .dropdown-menu a {
+                color: white;
+                padding: 0.5rem 1rem;
+            }
+
+            .dropdown-menu a:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: #e0e6ed;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="../onetech-lp.html" class="logo">ONETECH</a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="../onetech-lp.html">トップ</a></li>
+                    <li class="dropdown">
+                        <a href="../onetech-lp.html#products" class="dropdown-toggle">プロダクト <span style="font-size: 0.8em;">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="insightscanx.html">InsightScanX（インサイトスキャンエックス）</a></li>
+                            <li><a href="housecan.html">HOUSECAN（ハウスキャン）</a></li>
+                            <li><a href="ai-inspector.html">AI Inspector（エーアイインスペクター）</a></li>
+                            <li><a href="customize.html">カスタマイズ（カスタマイズ）</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div>
+                    <h1>カスタマイズのご提案</h1>
+                    <p style="margin: 1.5rem 0;">点群処理・LiDARスキャン・BIMで建設DXと業務最適化を実現。御社の課題に沿ったソリューションをご提案します。</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://placehold.jp/600x400.png" alt="建設DX・業務最適化のカスタマイズソリューション - 点群・LiDAR・BIM" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- コンテンツセクション -->
+        <section id="overview" class="content-section">
+            <!-- セクション１：課題解決事例の導入 -->
+            <div class="intro-section">
+                <h2>建設DX・業務最適化のカスタマイズのご提案</h2>
+                <p class="subtitle">点群処理・LiDARスキャン・BIMで御社の課題に沿ったソリューションをご提案します。</p>
+                <p class="message">
+                    建設業界では、業種や業務プロセスによって異なる課題が存在します。出来高・進捗管理の非効率、竣工検査の時間短縮、BIM化の工数削減、定期点検業務のデジタル化、営繕管理の効率化など、様々な現場の課題があります。
+                </p>
+                <p class="message">
+                    私たちは、点群処理やLiDARスキャン、アプリ、クラウド、AIをコア技術として、お客様の業務フローに最適化したソリューションを提供しています。土木、建築、サブコン、住宅、商業施設、補償コンサル、製造業、不動産・ハウジングなど、様々な業種で実績があります。
+                </p>
+                <div class="capability">
+                    <h3>私たちの技術で解決できる</h3>
+                    <p>
+                        点群データによる差分取得と進捗管理、デジタル検査管理の効率化、点群から自動で3Dモデル生成、点検アプリによる業務自動化、デジタルツインによる遠隔管理、検査テンプレート化と報告書自動化、図面自動生成による積算・レポート自動化、スキャンから2D図面自動生成とCAD/BIM連携、業務フローに最適化したライト版ツール、調査から報告まで一元化したアプリ開発など、お客様の課題に応じた最適なソリューションをご提案します。
+                    </p>
+                </div>
+            </div>
+
+            <!-- セクション２：課題解決事例の表 -->
+            <div class="case-studies-section">
+                <h2>課題解決事例</h2>
+                <p class="case-studies-intro">
+                    様々な業種・業態のお客様の課題を、コア技術を活用して解決する事例をご紹介します。
+                </p>
+                <div style="overflow-x: auto;">
+                    <table class="case-studies-table">
+                        <thead>
+                            <tr>
+                                <th>業種</th>
+                                <th>お客様</th>
+                                <th>業務プロセス</th>
+                                <th>課題</th>
+                                <th>課題詳細</th>
+                                <th>現状・備考</th>
+                                <th>解決策</th>
+                                <th>実現可能性</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="target">土木</td>
+                                <td class="client">大手土木道路施工会社</td>
+                                <td>道路工事</td>
+                                <td>出来高・進捗管理</td>
+                                <td>出来高・進捗管理がアナログ（手作業）で行われている</td>
+                                <td>出来高進捗管理が紙・手入力中心</td>
+                                <td class="solutions">点群データで差分を取得し、予算と出来高の差異をシステムで一元管理</td>
+                                <td class="feasible possible">可能</td>
+                            </tr>
+                            <tr>
+                                <td class="target">建築</td>
+                                <td class="client">大手建設会社</td>
+                                <td>竣工</td>
+                                <td>竣工検査</td>
+                                <td>竣工検査に時間がかかりすぎる</td>
+                                <td>音声入力アプリは使っているが、さらに高速・合理化したい</td>
+                                <td class="solutions">より効率的なデジタル検査管理の仕組みを導入</td>
+                                <td class="feasible concern">可能だが費用対効果に懸念</td>
+                            </tr>
+                            <tr>
+                                <td class="target">サブコン</td>
+                                <td class="client">大手サブコン</td>
+                                <td>空調設備</td>
+                                <td>リノベーション</td>
+                                <td>配管設備更新時のBIM化に時間がかかる</td>
+                                <td>Leicaでの点群取得・InfiPointsでの3D化の時間短縮は可能</td>
+                                <td class="solutions">点群から自動で3Dモデルを生成</td>
+                                <td class="feasible possible">可能</td>
+                            </tr>
+                            <tr>
+                                <td class="target">住宅</td>
+                                <td class="client">大手住宅メーカー</td>
+                                <td>定期点検</td>
+                                <td>定期点検業務</td>
+                                <td>定期点検が紙とペンによるアナログ運用</td>
+                                <td>顧客とのアポイント調整にも工数がかかっている</td>
+                                <td class="solutions">点検アプリ導入により点検・調整時間を短縮</td>
+                                <td class="feasible concern">可能性あり（費用対効果と優先度が課題）</td>
+                            </tr>
+                            <tr>
+                                <td class="target">商業施設</td>
+                                <td class="client">大手商業施設運営会社</td>
+                                <td>営繕管理</td>
+                                <td>カラオケ店舗営繕</td>
+                                <td>約2000ルームを営繕部隊が出張ベースで管理</td>
+                                <td>点群でデジタルツイン化し課題管理を検討</td>
+                                <td class="solutions">点群によるデジタルツインで遠隔管理</td>
+                                <td class="feasible challenge">点群取得に膨大な時間がかかり実現性に課題</td>
+                            </tr>
+                            <tr>
+                                <td class="target">住宅</td>
+                                <td class="client">大手住宅インスペクション会社</td>
+                                <td>住宅インスペクション</td>
+                                <td>点検業務がアナログで非効率</td>
+                                <td>紙とペンによる点検、写真管理・報告作成に時間がかかる。複数人同時検査、検査順序、立面図なし物件、再撮影対応など運用課題が多い</td>
+                                <td>年70件→100件以上に増加見込み。約4割は資料なし物件</td>
+                                <td class="solutions">点検アプリにより検査テンプレート化、図面マーキング、複数担当対応、写真・音声入力、報告書自動化を実現</td>
+                                <td class="feasible possible">可能（ROIと導入優先度の整理が必要）</td>
+                            </tr>
+                            <tr>
+                                <td class="target">補償コンサル</td>
+                                <td class="client">大手補償コンサル会社</td>
+                                <td>補償調査（木造物件）</td>
+                                <td>調査後工程の工数が極端に大きい</td>
+                                <td>紙野帳→図面→積算→報告書作成で15〜20人日。国指定フォーマット対応で二度手間が発生</td>
+                                <td>高精度・短納期要求。業界共通課題</td>
+                                <td class="solutions">図面自動生成を起点に積算・レポートを段階的に自動化した業務特化システム</td>
+                                <td class="feasible possible">可能（補助金＋業界横展開でROI成立）</td>
+                            </tr>
+                            <tr>
+                                <td class="target">製造業（設備設計）</td>
+                                <td class="client">大手設備設計会社</td>
+                                <td>トイレ改修調査・設計</td>
+                                <td>図面化・設計会社との往復がボトルネック</td>
+                                <td>紙計測→図面作成→設計会社返送に約3日。修正が多発</td>
+                                <td>iPhone SEのみ。既存ツールは品質不足</td>
+                                <td class="solutions">スキャンから2D図面自動生成＋CAD/BIM連携で設計工程を短縮</td>
+                                <td class="feasible possible">可能（小規模PoCで効果検証前提）</td>
+                            </tr>
+                            <tr>
+                                <td class="target">不動産・ハウジング</td>
+                                <td class="client">大手不動産・ハウジング会社</td>
+                                <td>リノベ初期検討（現調〜概算）</td>
+                                <td>関係者間の調整コストが高い</td>
+                                <td>不動産⇔顧客⇔工務店のやり取りが煩雑。既存ツールは機能過多</td>
+                                <td>精度よりコミュニケーション重視</td>
+                                <td class="solutions">平面図・白モデル・簡易レイアウト・見積依頼に絞ったライト版ツール</td>
+                                <td class="feasible possible">可能（段階導入・ライト版前提）</td>
+                            </tr>
+                            <tr>
+                                <td class="target">ハウジング・工務店</td>
+                                <td class="client">大手ハウジング・工務店</td>
+                                <td>リノベ現地調査〜報告</td>
+                                <td>調査・書類・連絡が分断</td>
+                                <td>現調前後の情報、3D、書類、業者連携が別管理</td>
+                                <td>補助金（事業再構築）活用予定</td>
+                                <td class="solutions">調査〜報告〜業者連携を一元化した受託アプリ開発</td>
+                                <td class="feasible possible">可能（補助金前提・受託案件）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- セクション３：私たちの技術優位性と特徴 -->
+            <div class="technology-section">
+                <h2>私たちの技術優位性と特徴</h2>
+                <p class="description">
+                    点群処理やLiDARスキャン、アプリ、クラウド、AIをコア技術として、お客様の業務フローに最適化したソリューションを提供します。
+                    これらの技術を組み合わせることで、従来のアナログ業務をデジタル化し、業務効率を大幅に向上させることができます。
+                </p>
+                <div style="text-align: center; margin: 2rem 0;">
+                    <img src="https://placehold.jp/800x500.png" alt="点群処理・LiDARスキャン・BIMをコアとした建設DXアーキテクチャ" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+                <div class="core-diagram">
+                    <div class="core-center">
+                        <h3>コア</h3>
+                        <h3 style="font-size: 1rem; margin-top: 0.5rem;">LiDARスキャン</h3>
+                        <p style="margin-top: 0.5rem;">点群、BIM、平面図、計測、部屋作成、建具認識<br>課題管理</p>
+                    </div>
+                    <div class="core-feature top-left">LLM・RAG<br>マルチモーダル<br>業務最適化<br>音声認識</div>
+                    <div class="core-feature top-right">AI・ML<br>画像認識<br>点群・BIM<br>モデル生成</div>
+                    <div class="core-feature mid-left">AR・VR</div>
+                    <div class="core-feature mid-right">オンプレミス<br>クラウド<br>ローカル</div>
+                    <div class="core-feature bottom-left">SaaS<br>機能</div>
+                    <div class="core-feature bottom-right">現地調査<br>レポート</div>
+                    <div class="core-feature bottom-center-left">積算<br>見積もり</div>
+                    <div class="core-feature bottom-center-right">WEBCAD<br>2D/3D</div>
+                </div>
+            </div>
+
+            <!-- セクション４：補助金活用 -->
+            <div class="subsidy-section">
+                <h2>補助金活用しソフトウェア開発</h2>
+                <p class="subtitle">補助金を活用し費用対効果を改善</p>
+                <p class="intro">
+                    カスタマイズソリューションの開発費用を抑えるため、様々な補助金制度の活用を推奨しています。
+                    補助金を導入コンサルのご紹介も可能です。
+                </p>
+                <div style="overflow-x: auto;">
+                    <table class="subsidy-table">
+                        <thead>
+                            <tr>
+                                <th>補助金名</th>
+                                <th>概要</th>
+                                <th>AIソフト開発（B2B業務支援）での利用可否</th>
+                                <th>補助上限・補助率</th>
+                                <th>応募期限・スケジュール</th>
+                                <th>公式サイトURL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 600; color: #1a2332;">中小企業新事業進出促進補助金</td>
+                                <td>新市場への新規事業進出や高付加価値分野への進出を支援</td>
+                                <td>利用可能。AIを活用したB2B業務支援ソフトウェアの新規開発を含めることが可能</td>
+                                <td>上限2,500万円〜7,000万円（賃上げ特例で最大9,000万円）／補助率1/2</td>
+                                <td>年複数回募集。2025年12月募集、2026年も複数回予定</td>
+                                <td><a href="https://shinjigyou-shinshutsu.smrj.go.jp" target="_blank" style="color: #3B63DA;">https://shinjigyou-shinshutsu.smrj.go.jp</a></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600; color: #1a2332;">中小企業省力化投資補助金（一般型）</td>
+                                <td>人手不足解消や業務自動化のための設備・システム導入を支援</td>
+                                <td>条件付きで利用可能。自社業務の省力化を目的としたAIシステム導入の場合</td>
+                                <td>上限750万円〜1,000万円（従業員数・賃上げ特例により変動）／補助率1/2〜2/3</td>
+                                <td>一般型は年3〜4回募集。2026年初旬に募集予定</td>
+                                <td><a href="https://shoryokuka.smrj.go.jp" target="_blank" style="color: #3B63DA;">https://shoryokuka.smrj.go.jp</a></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600; color: #1a2332;">ものづくり補助金</td>
+                                <td>新製品・新サービスの開発や生産性向上投資を支援</td>
+                                <td>利用可能。AIソフトウェアを含む新サービス開発を含めることが可能</td>
+                                <td>上限750万円〜2,500万円（特別枠で最大4,000万円）／補助率1/2〜2/3</td>
+                                <td>年約3〜5回募集。2026年も継続予定</td>
+                                <td><a href="https://portal.monodukuri-hojo.jp" target="_blank" style="color: #3B63DA;">https://portal.monodukuri-hojo.jp</a></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600; color: #1a2332;">新製品・新技術開発助成事業（東京都）</td>
+                                <td>東京都内の中小企業の研究開発・試作を支援</td>
+                                <td>利用可能。B2B向けAIソフトウェアの試作・研究開発フェーズに適している</td>
+                                <td>上限2,500万円／補助率1/2（賃上げ特例で3/4）</td>
+                                <td>年1回募集。通常5〜6月頃（次回は2026年度予定）</td>
+                                <td><a href="https://www.tokyo-kosha.or.jp/support/josei/jigyo/shinseihin.html" target="_blank" style="color: #3B63DA;">https://www.tokyo-kosha.or.jp/support/josei/jigyo/shinseihin.html</a></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600; color: #1a2332;">成長型中小企業等研究開発支援事業（Go-Tech）</td>
+                                <td>産学連携による高度な研究開発を最大3年間支援</td>
+                                <td>利用可能。高度なAIアルゴリズムや基盤技術開発に適している</td>
+                                <td>上限9,750万円（標準枠）／補助率2/3</td>
+                                <td>年1回募集。通常冬〜早春</td>
+                                <td><a href="https://www.chusho.meti.go.jp/sapoin/index.php" target="_blank" style="color: #3B63DA;">https://www.chusho.meti.go.jp/sapoin/index.php</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="text-align: center; margin-top: 2rem; color: #495057; font-size: 1rem;">
+                    補助金を導入コンサルのご紹介も可能です。
+                </p>
+            </div>
+
+            <!-- セクション５：応用例と金額 -->
+            <div class="use-cases-section">
+                <h2>応用例</h2>
+                <div class="use-case-item">
+                    <img src="https://placehold.jp/600x300.png" alt="リノベーションアプリ・現地調査から建設DXまでカスタマイズ事例" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3>1. リノベーションアプリとWEBシステム</h3>
+                    <p class="description">現地調査からリフォームプラン提案まで</p>
+                    <p class="budget">予算 : 5000万円</p>
+                    <p class="features">左の機能を全て導入</p>
+                </div>
+                <div class="use-case-item">
+                    <img src="https://placehold.jp/600x300.png" alt="施設管理アプリ・点群・BIMで業務最適化するカスタマイズ事例" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3>2. 施設管理アプリとWEBシステム</h3>
+                    <p class="description">複数の地下施設をオンプレミスで管理</p>
+                    <p class="budget">予算 : 1000万円</p>
+                    <p class="features">コア機能と複数ユーザークラウド管理</p>
+                </div>
+                <div class="use-case-item">
+                    <img src="https://placehold.jp/600x300.png" alt="商業施設管理アプリ・建設DXで営繕管理を効率化するカスタマイズ事例" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3>3. 商業施設管理アプリとWEBシステム</h3>
+                    <p class="description">複数の施設をオンプレミスで管理</p>
+                    <p class="budget">予算 : 2500万円</p>
+                    <p class="features">コア機能とAI機能、現地調査・レポート</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section id="contact" class="section" style="background: #ffffff;">
+            <h2 style="color: #1a2332; border-bottom: 2px solid #6c757d; padding-bottom: 1rem; margin-bottom: 2rem; text-align: center; font-weight: 600;">
+                お問い合わせ・資料請求
+            </h2>
+            <div style="text-align: center; margin: 2rem 0;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #495057;">
+                    カスタマイズソリューションについてご相談ください<br>
+                    まずは無料でお試しください。
+                </p>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                    <div class="card" style="background: #ffffff; border: 1px solid #e9ecef;">
+                        <h3 style="color: #1a2332; margin-bottom: 1rem;">📄 資料請求</h3>
+                        <p style="color: #495057; margin-bottom: 1rem;">サービス詳細資料を無料でお送りします</p>
+                        <a href="#contact-form" class="cta-button" style="background: #1e3c72; color: white;">資料請求する</a>
+                    </div>
+                    <div class="card" style="background: #ffffff; border: 1px solid #e9ecef;">
+                        <h3 style="color: #1a2332; margin-bottom: 1rem;">💬 お問い合わせ</h3>
+                        <p style="color: #495057; margin-bottom: 1rem;">ご質問やご相談がございましたらお気軽に</p>
+                        <a href="#contact-form" class="cta-button" style="background: #1e3c72; color: white;">お問い合わせ</a>
+                    </div>
+                    <div class="card" style="background: #ffffff; border: 1px solid #e9ecef;">
+                        <h3 style="color: #1a2332; margin-bottom: 1rem;">🎬 デモ申し込み</h3>
+                        <p style="color: #495057; margin-bottom: 1rem;">実際のデモンストレーションを体験</p>
+                        <a href="#contact-form" class="cta-button" style="background: #1e3c72; color: white;">デモを申し込む</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- お問い合わせフォーム（簡易版） -->
+            <div id="contact-form" style="max-width: 600px; margin: 3rem auto; background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="color: #1a2332; margin-bottom: 1.5rem; text-align: center; font-weight: 600;">まずは無料でお試しください</h3>
+                <form style="display: flex; flex-direction: column; gap: 1rem;">
+                    <input type="text" placeholder="お名前" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                    <input type="email" placeholder="メールアドレス" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                    <input type="tel" placeholder="電話番号" style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                    <select required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <option value="">お問い合わせ種別を選択</option>
+                        <option value="material">資料請求</option>
+                        <option value="demo">デモ申し込み</option>
+                        <option value="inquiry">お問い合わせ</option>
+                        <option value="customize">カスタマイズ相談</option>
+                    </select>
+                    <textarea placeholder="お問い合わせ内容" rows="5" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; resize: vertical; background: white;"></textarea>
+                    <button type="submit" class="cta-button" style="background: #1e3c72; color: white; border: none; cursor: pointer; padding: 1rem 2rem; font-size: 1.1rem; font-weight: 600;">送信する</button>
+                </form>
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #dee2e6; text-align: center;">
+                    <p style="color: #495057; margin-bottom: 1rem; font-size: 0.95rem;">お急ぎの場合は、直接お電話またはメールでお問い合わせください</p>
+                    <p style="color: #1a2332; font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600;">
+                        <strong>株式会社One Technology Japan</strong>
+                    </p>
+                    <p style="color: #1a2332; font-size: 1.1rem; margin-bottom: 0.5rem;">
+                        TEL: <a href="tel:03-5324-2652" style="color: #1e3c72; text-decoration: none; font-weight: 600;">03-5324-2652</a>（代表）
+                    </p>
+                    <p style="color: #1a2332; font-size: 1rem;">
+                        MAIL: <a href="mailto:contact@onetech.jp" style="color: #1e3c72; text-decoration: none; font-weight: 600;">contact@onetech.jp</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 株式会社One Technology Japan. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">建設DXソリューション | LiDARスキャン × 3Dモデル × AI検査</p>
+        </div>
+    </footer>
+</body>
+</html>

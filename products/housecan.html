@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HOUSECANはiPhone・iPadで使える建築調査・リノベーションアプリ。LiDARスキャンで簡易BIM・図面を自動生成し、見積り・資金計画まで自動出力。現地調査アプリとして建設DXと品質管理DXを実現。">
+    <meta name="keywords" content="HOUSECAN,リノベーションアプリ,建築調査,LiDARスキャン,簡易BIM,見積り,資金計画,現地調査アプリ,建設DX,点群データ,リフォーム現調">
+    <title>HOUSECAN（建築調査アプリ）| ONETECH - LiDARスキャンで簡易BIM・見積りを自動化</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        :root {
+            --primary-blue: #1E2C58;
+            --accent-blue: #4A90E2;
+            --light-gray: #C3C1C1;
+            --white: #F8F8F8;
+        }
+
+        .pain-section.explicit {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .before-after-item {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .effect-numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .effect-number {
+            text-align: center;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .effect-number .number {
+            font-size: 3rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1E2C58;
+        }
+        
+        .use-case-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .use-case-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #ffffff;
+            border-radius: 8px;
+            border-left: 3px solid #1E2C58;
+            border: 1px solid #e9ecef;
+        }
+
+        .solution-overview {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #e9ecef;
+        }
+
+        .content-section {
+            background: #ffffff;
+            color: #1a2332;
+            padding: 3rem 2rem;
+            margin: 0;
+        }
+
+        /* プルダウンメニュー */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0 0 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #1E2C58;
+        }
+
+        .dropdown-menu li:first-child a {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-menu li:last-child a {
+            border-radius: 0 0 8px 8px;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 2rem 1rem;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.1);
+                margin-top: 0.5rem;
+            }
+
+            .dropdown-menu a {
+                color: white;
+                padding: 0.5rem 1rem;
+            }
+
+            .dropdown-menu a:hover {
+                background: #f8f9fa;
+                color: #1E2C58;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="../onetech-lp.html" class="logo">ONETECH</a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="../onetech-lp.html">トップ</a></li>
+                    <li class="dropdown">
+                        <a href="../onetech-lp.html#products" class="dropdown-toggle">プロダクト <span style="font-size: 0.8em;">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="insightscanx.html">InsightScanX（インサイトスキャンエックス）</a></li>
+                            <li><a href="housecan.html">HOUSECAN（ハウスキャン）</a></li>
+                            <li><a href="ai-inspector.html">AI Inspector（エーアイインスペクター）</a></li>
+                            <li><a href="customize.html">カスタマイズ（カスタマイズ）</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- ヒーローセクション -->
+        <section class="hero" style="background: #f8f9fa; height: auto; padding: 4rem 2rem;">
+            <div class="hero-content" style="position: relative; z-index: 1; color: #1a2332; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div>
+                    <h1 style="color: #1a2332; text-shadow: none;">HOUSECAN<br>iPhone・iPadで使える建築調査・記録アプリ</h1>
+                    <p style="color: #495057; text-shadow: none; margin: 1.5rem 0;">LiDARスキャンで簡易BIM・見積り・資金計画を自動化するリノベーションアプリ。<br>現場でスキャン、撮影、メモするだけ。現地調査から建設DXまで。</p>
+                    <a href="#overview" class="cta-button">詳細を見る</a>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://placehold.jp/600x400.png" alt="HOUSECAN - 建築調査・リノベーションアプリでLiDARスキャンと簡易BIM" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- コンテンツセクション -->
+        <section id="overview" class="content-section">
+            <!-- 顕在化されたペインの提示 -->
+            <div class="pain-section explicit">
+                <h3 style="color: #1a2332; font-weight: 600;">現場で起きている具体的な課題</h3>
+                <ul style="list-style: none; padding: 0; color: #495057;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 現場でのメモや採寸の手間が多く、調査時間がかかる
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 専門知識や経験に左右され、調査品質にばらつきがある
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 積算・見積り・資金計画の作成に時間がかかり、入力の重複や手戻りが発生
+                    </li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #1a2332;">✓</strong> 電話・メールなど情報が散らばり、伝達ミスや手配の食い違いが発生
+                    </li>
+                    <li style="padding: 0.75rem 0;">
+                        <strong style="color: #1a2332;">✓</strong> お客様への返答時間が長く、機会損失が発生している
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 解決策の提示（製品概要） -->
+            <div class="solution-overview">
+                <h3 style="color: #1a2332; font-weight: 600;">製品概要とアプローチ</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; color: #495057;">
+                    HOUSECANは、iPhone・iPadで使える建築調査・記録アプリです。建設DX 3Dスキャンにより、現場でスキャン、撮影、メモするだけ。手間のかかる調査や図面づくりは、もう過去のもの。
+                    現場確認のすべてを、アプリひとつで、かんたん・スピーディにデジタル化します。
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #495057;">
+                    iPhone LiDAR 3Dスキャン機能搭載のカメラで室内を撮影するだけで、簡易BIMにて図面を自動生成。
+                    間取り図作成アプリ、フロアプラン自動作成により、専門知識や経験に左右されず、誰でも同じ品質の現地調査が可能です。
+                    現地調査アプリ、リフォーム現調アプリとして、内装業間取り図、不動産間取り作成に対応。
+                    スキャンデータからリノベーションプランを作成すると同時に工事原価を自動で拾い出し、
+                    見積もり作成アプリとして見積書・資金計画へスムーズに反映。写真付き現調レポートで現場からそのまま提案まで進められます。
+                </p>
+            </div>
+
+            <!-- ビフォーアフター -->
+            <div class="before-after">
+                <div class="before-after-item">
+                    <img src="https://placehold.jp/400x250.png" alt="建築調査・現地調査の導入前（アナログ運用）" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1a2332; font-weight: 600;">❌ 導入前</h4>
+                    <ul style="color: #495057;">
+                        <li>現地調査：メモや採寸に時間がかかる</li>
+                        <li>図面作成：専門知識が必要で品質にばらつき</li>
+                        <li>積算・見積り：手作業で入力の重複や手戻り</li>
+                        <li>資金計画：別途作成が必要で時間がかかる</li>
+                        <li>協力会社連携：電話・メールで情報が散らばる</li>
+                        <li>顧客対応：返答時間が長く機会損失</li>
+                    </ul>
+                </div>
+                <div class="before-after-item">
+                    <img src="https://placehold.jp/400x250.png" alt="建築調査・簡易BIM・見積り自動化の導入後（建設DX）" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1a2332; font-weight: 600;">✅ 導入後</h4>
+                    <ul style="color: #495057;">
+                        <li>現地調査：スキャンするだけで自動化</li>
+                        <li>図面作成：簡易BIMで自動生成、品質統一</li>
+                        <li>積算・見積り：自動で拾い出し、スムーズに反映</li>
+                        <li>資金計画：自動出力で即座に作成可能</li>
+                        <li>協力会社連携：チャットで一元管理</li>
+                        <li>顧客対応：返答時間短縮で機会損失防止</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 特徴 -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">差別化ポイント</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="iPhone LiDAR 3Dスキャンで建築調査・簡易BIM・間取り図を自動作成" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">iPhone LiDAR 3Dスキャン：間取り図作成アプリ・フロアプラン自動作成</h4>
+                        <p style="color: #495057;">建設DX 3Dスキャンにより、LiDAR機能搭載のカメラで室内を撮影するだけで、簡易BIMにて図面を自動生成。間取り図作成アプリ、フロアプラン自動作成により、専門知識や経験に左右されず、誰でも同じ品質の現地調査が可能です。現地調査アプリ、リフォーム現調アプリとして、内装業間取り図、不動産間取り作成に対応。現場でのメモや採寸の手間を大幅に減らし、調査時間を短縮します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="見積り・資金計画の自動出力でリノベーションアプリを効率化" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">見積もり作成アプリ：積算・見積り・資金計画が自動で出力</h4>
+                        <p style="color: #495057;">スキャンデータからリノベーションプランを作成すると同時に工事原価を自動で拾い出し、見積もり作成アプリとして見積書・資金計画へスムーズに反映。入力の重複や手戻りがなく、現場からそのまま提案まで進められます。お客様への返答時間も短縮でき、機会損失を防ぎます。</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="施工品質検査・品質管理DXで建設現場デジタルツインを構築" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">施工品質検査アプリ：品質管理DX</h4>
+                        <p style="color: #495057;">施工品質検査アプリとして、施工不良自動検出、ひび割れ自動検出、かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査に対応。品質管理DXにより、ゼネコン品質管理を支援。建設現場デジタルツインを構築し、BIM連携点群により品質管理を効率化します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://placehold.jp/300x200.png" alt="写真付き現調レポート・検査レポート自動生成で建設DX" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #1a2332; font-weight: 600;">写真付き現調レポート・AR不具合表示・検査レポート自動生成</h4>
+                        <p style="color: #495057;">現地調査アプリとして、写真付き現調レポートを自動生成。AR不具合表示により、課題の位置を3D上で確認可能。検査レポート自動生成により、レポート作成を効率化。すべてのデータは暗号化され、ISO27001に準拠したセキュアなクラウド環境で管理されています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 導入効果（数値） -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">導入効果（定量的な成果）</h3>
+                <div class="effect-numbers">
+                    <div class="effect-number">
+                        <span class="number">±2cm</span>
+                        <span style="color: #495057;">測定精度</span>
+                    </div>
+                    <div class="effect-number">
+                        <span class="number">大幅</span>
+                        <span style="color: #495057;">時間短縮</span>
+                    </div>
+                    <div class="effect-number">
+                        <span class="number">統一</span>
+                        <span style="color: #495057;">品質向上</span>
+                    </div>
+                    <div class="effect-number">
+                        <span class="number">1週間</span>
+                        <span style="color: #495057;">導入期間</span>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                    <h4 style="margin-bottom: 1rem; color: #1a2332; font-weight: 600;">主な効果</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            ✓ 現場でのメモや採寸の手間を大幅に減らし、調査時間を短縮
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            ✓ 専門知識や経験に左右されず、誰でも同じ品質の現地調査が可能
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            ✓ 入力の重複や手戻りがなく、現場からそのまま提案まで進められる
+                        </li>
+                        <li style="padding: 0.5rem 0; color: #495057;">
+                            ✓ お客様への返答時間も短縮でき、機会損失を防ぐ
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 応用例・ユースケース -->
+            <div>
+                <h3 style="color: #1a2332; font-weight: 600;">応用例・想定利用シーン</h3>
+                <ul class="use-case-list">
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">🏠 リフォーム現調アプリ：リフォーム・リノベーション</strong><br>
+                        現地調査アプリ、リフォーム現調アプリとして、既存住宅の改修・改築での現地調査から見積り作成までを効率化。iPhone LiDAR 3Dスキャンにより、スキャンデータからリノベーションプランを作成し、見積もり作成アプリとして工事原価を自動で拾い出し、見積書・資金計画へスムーズに反映。写真付き現調レポートで現場からそのまま提案まで進められます。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">🔍 施工品質検査アプリ：建物点検・診断・品質管理DX</strong><br>
+                        施工品質検査アプリとして、施工不良自動検出、ひび割れ自動検出、かぶり厚さ検査、鉄筋露出検出、コンクリート品質検査に対応。品質管理DXにより、ゼネコン品質管理を支援。建設DX 3Dスキャンにより高精度な測定が可能で、専門知識がなくても品質の高い点検が実施できます。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">📐 間取り図作成アプリ：内装業間取り図・不動産間取り作成</strong><br>
+                        間取り図作成アプリ、フロアプラン自動作成により、精密な実測データを元にした的確な設計図面の作成。内装業間取り図、不動産間取り作成に対応。簡易BIMにて図面を自動生成し、設計精度を向上させます。建設現場デジタルツインを構築し、BIM連携点群により品質管理を効率化。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">📋 現地調査アプリ：写真付き現調レポート・検査レポート自動生成</strong><br>
+                        現地調査アプリとして、正確な図面データを活用した各種補助金申請書類の迅速作成。写真付き現調レポート、検査レポート自動生成により、スキャンデータから必要な情報を自動抽出し、申請業務を効率化。AR不具合表示で課題位置を可視化。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">🔧 建設DXツール比較：メンテナンス管理</strong><br>
+                        建設DXツール比較において、定期的なメンテナンス計画の立案と実施状況の管理。チャット機能で協力会社と連携し、メンテナンス業務を一元管理。建設現場デジタルツインにより、複数物件を効率的に管理。
+                    </li>
+                    <li style="color: #495057;">
+                        <strong style="color: #1a2332;">🏢 不動産査定・評価</strong><br>
+                        客観的なデータに基づいた精密な物件評価と査定業務。iPhone LiDAR 3Dスキャンによる高精度な測定データで、正確な査定を実現。不動産間取り作成に対応し、査定業務を効率化。
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 料金プラン -->
+            <div style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <h3 style="margin-bottom: 1.5rem; color: #1a2332; font-weight: 600;">料金プラン</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div style="padding: 1.5rem; background: #ffffff; border-radius: 8px; border: 1px solid #e9ecef;">
+                        <h4 style="margin-bottom: 1rem; color: #1a2332; font-weight: 600;">Lite</h4>
+                        <p style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1E2C58;">¥33,000<span style="font-size: 1rem; font-weight: normal; color: #495057;">(税込)/月</span></p>
+                        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #495057;">簡単スキャンで始める現地調査</p>
+                        <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">✓ 1ユーザーアカウント</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">✓ LiDARスキャンによる図面自動生成</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #dee2e6; color: #495057;">✓ 積算・見積書の作成</li>
+                            <li style="padding: 0.5rem 0; color: #495057;">✓ 協力会社とのチャット連携</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; text-align: center; font-size: 0.9rem; color: #495057;">
+                    ※対応機種：LiDAR機能搭載のiPhone（12 Pro以降）、iPad（Pro 2020年モデル以降）<br>
+                    ※導入期間：お申し込みから利用開始まで約1週間<br>
+                    ※詳細な料金プランについてはお問い合わせください
+                </p>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section id="contact" class="section" style="background: #ffffff;">
+            <h2 style="color: #1a2332; border-bottom: 2px solid #6c757d; padding-bottom: 1rem; margin-bottom: 2rem; text-align: center; font-weight: 600;">
+                お問い合わせ・資料請求
+            </h2>
+            <div style="text-align: center; margin: 2rem 0;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #495057;">
+                    HOUSECANで建築調査を効率化しませんか？<br>
+                    まずは無料でお試しください。
+                </p>
+                <div id="contact-form" style="max-width: 600px; margin: 3rem auto; background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid #e9ecef;">
+                    <h3 style="color: #1a2332; margin-bottom: 1.5rem; text-align: center; font-weight: 600;">お問い合わせフォーム</h3>
+                    <form style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="text" placeholder="お名前" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <input type="email" placeholder="メールアドレス" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <input type="tel" placeholder="電話番号" style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                        <select required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; background: white;">
+                            <option value="">お問い合わせ種別を選択</option>
+                            <option value="material">資料請求</option>
+                            <option value="demo">デモ申し込み</option>
+                            <option value="inquiry">お問い合わせ</option>
+                        </select>
+                        <textarea placeholder="お問い合わせ内容" rows="5" required style="padding: 0.75rem; border-radius: 4px; border: 1px solid #ced4da; font-size: 1rem; resize: vertical; background: white;"></textarea>
+                        <button type="submit" class="cta-button" style="background: #1E2C58; color: white; border: none; cursor: pointer; padding: 1rem 2rem; font-size: 1.1rem; font-weight: 600;">送信する</button>
+                    </form>
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #dee2e6; text-align: center;">
+                        <p style="color: #495057; margin-bottom: 1rem; font-size: 0.95rem;">お急ぎの場合は、直接お電話またはメールでお問い合わせください</p>
+                        <p style="color: #1a2332; font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600;">
+                            <strong>株式会社One Technology Japan</strong>
+                        </p>
+                        <p style="color: #1a2332; font-size: 1.1rem; margin-bottom: 0.5rem;">
+                            TEL: <a href="tel:03-5324-2652" style="color: #1E2C58; text-decoration: none; font-weight: 600;">03-5324-2652</a>（代表）
+                        </p>
+                        <p style="color: #1a2332; font-size: 1rem;">
+                            MAIL: <a href="mailto:contact@onetech.jp" style="color: #1E2C58; text-decoration: none; font-weight: 600;">contact@onetech.jp</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 株式会社One Technology Japan. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">建設DXソリューション | LiDARスキャン × 3Dモデル × AI検査</p>
+        </div>
+    </footer>
+</body>
+</html>
